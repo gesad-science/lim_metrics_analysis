@@ -1,0 +1,619 @@
+processed_intent,processed_class,processed_attributes,processed_filter_attributes,processed_key_quantity,id,user_msg,expected_intent,expected_class,expected_attributes,expected_filter_attributes,expected_key_quantity,dataset
+ADD,anderson_martins_gomes,"{'student': 'student', 'name': 'name', '20': 'gomes'}",{},,551f14f4-3998-4f54-9a38-ea136349599b,"add student with name=anderson martins gomes, age=20",ADD,student,"{'name': 'Anderson Martins Gomes', 'age': '20'}",{},2,ORIGINAL
+ADD,history_of_brazil,"{'subject': 'description', 'history': 'description'}",{},,1dc96a7e-5957-43ac-96e4-b5e3f9e87dd9,"add subject with name=brazilian history, description=the history of brazil",ADD,subject,"{'name': 'Brazilian History', 'description': 'The history of Brazil'}",{},2,ORIGINAL
+ADD,ph_uece_br,"{'teacher': 'name', 'br': 'henrique'}",{},,4337f8e4-b33e-42a2-90de-9e9b23caecef,"add teacher with name=paulo henrique, age=65, email=ph@uece.br",ADD,teacher,"{'name': 'Paulo Henrique', 'age': '65', 'email': 'ph@uece.br'}",{},3,ORIGINAL
+ADD,math,"{'name': 'name', 'description': 'description', 'best_subject': 'best subject'}",{},,6ff4038f-dd35-4d04-9d8c-a6357689d5cf,"add subject with name=math, description=the best subject ever",ADD,subject,"{'name': 'Math', 'description': 'The best subject ever'}",{},2,ORIGINAL
+ADD,math,"{'name': 'name', 'description': 'description', 'best_subject': 'best subject'}",{},,a21e14bf-0b53-4d2d-919e-40306bf5ee32,"add subject with name=math, description='the best subject ever!'",ADD,subject,"{'name': 'Math', 'description': 'The best subject ever!'}",{},2,ORIGINAL
+ADD,adolescent,{'student': 'name=anderson'},{},,ed72cd78-a31c-49bd-a1eb-aaed67886a62,add student name=anderson,ADD,student,{'name': 'Anderson'},{},1,ORIGINAL
+READ,anderson,"{'students': 'students', 'name': 'name'}",{},,8489bace-42af-4a69-84bf-f7b31aa51758,get students with name anderson,READ,student,{},{'name': 'anderson'},1,ORIGINAL
+READ,teacher,{},{},,28384adb-e1c7-436a-8fe2-a82d7221e70e,show me the teachers,READ,teacher,{},{},0,ORIGINAL
+READ,teacher,{},{},,b4ce95f8-136e-4946-b54d-c71868a4a1d7,show teachers,READ,teacher,{},{},0,ORIGINAL
+DELETE,teacher,{'show': 'show'},{},,24468f50-28bd-4946-887f-c1983fbe5781,show teacher,READ,teacher,{},{},0,ORIGINAL
+ADD,900,"{'outcome': 'outcome', 'value': 'outcome', 'date': 'date', 'dome_created_at': '2025-09-22'}",{},,1d5ca6d1-f813-4c16-a2af-b2460fa97a29,"include outcome value 900, date is today, and description is ""adjusting the numbers""",ADD,outcome,"{'value': '900', 'date': 'today', 'description': 'adjusting the numbers'}",{},3,ORIGINAL
+READ,invoice,{},{},,5e8a8a29-034b-48d0-b89a-3460168093e3,get invoices,READ,invoice,{},{},0,ORIGINAL
+ADD,module_x,"{'test': 'test', 'scope': 'scope', 'module': 'scope', 'x': 'x', 'date': 'date', 'timeout': 'timeout', 'limit': 'limit'}",{},,8890d24e-99ad-42cb-b214-45255439c08b,"add a test with scope=module x, date=01/01/2022, timeout = 100, limit=10",ADD,test,"{'scope': 'Module X', 'date': '01/01/2022', 'timeout': '100', 'limit': '10'}",{},4,ORIGINAL
+ADD,y,{'test': 'number'},{},,a22749da-e82a-4e9b-874d-7f4a9ba78eca,add a test with scope=module y and number = 8,ADD,test,"{'scope': 'Module Y', 'number': '8'}",{},2,ORIGINAL
+ADD,199,"{'student': 'student', 'name': 'name', '199': 'anderson'}",{},,2dbe4cc9-f79e-4c0b-aff4-0aec974fc041,"add student with name=anderson, age=199",ADD,student,"{'name': 'Anderson', 'age': '199'}",{},2,ORIGINAL
+DELETE,199,"{'student': 'name is anderson, and age is 199'}",{},,25d2fde8-63a1-45e0-b911-ec80b64d3b80,"delete student name is anderson, and age is 199",DELETE,student,{},"{'name': 'Anderson', 'age': '199'}",2,ORIGINAL
+ADD,author,"{'article': 'author', 'author': 'author'}",{},,dc0dd886-54b6-4282-a1d5-0aeca0af7a37,"add article with title=the title, author=the author",ADD,article,"{'title': 'The title', 'author': 'The author'}",{},2,ORIGINAL
+UPDATE,article,{'title': 'title'},"{'title': 'the title', 'author': 'author'}",,60b7a390-2c1e-40a5-918f-2497670db7be,"update article with title ""the title"" and author ""the author"" set the title to ""the new title""",UPDATE,article,{'title': 'The new title'},"{'title': 'The title', 'author': 'The author'}",3,ORIGINAL
+ADD,ad,"{'article': 'article', 'author': 'author'}",{},,45f51a73-40c3-4b38-acc2-f555d195e378,add article with author=anderson,ADD,article,{'author': 'Anderson'},{},1,ORIGINAL
+DELETE,article,{'author': 'author'},{},,f128a253-349d-4e84-b7b8-59d1d2fdf756,"delete article when author=""anderson""",DELETE,article,{},{'author': 'Anderson'},1,ORIGINAL
+READ,article,{},{},,477cbfa1-31fc-4223-9069-e4c0493c8660,show me the articles,READ,article,{},{},0,ORIGINAL
+ADD,abstract,"{'title': 'title', 'author': 'author', 'abstract': 'abstract', 'keywords': 'keywords'}",{},,50c8165b-5a83-44ed-a080-054fd3ff8f46,"add article with title=the title, author=the author, abstract=the abstract, keywords=the keywords",ADD,article,"{'title': 'The title', 'author': 'The author', 'abstract': 'The abstract', 'keywords': 'The keywords'}",{},4,ORIGINAL
+UPDATE,e_mail,{'co_author': 'co-author'},{'title': 'title'},,15476369-c4fa-490c-91a2-fd46e33d36a1,"update article with title ""the title"", setting the co-author as ""anderson gomes""",UPDATE,article,{'co_author': 'Anderson Gomes'},{'title': 'The title'},2,ORIGINAL
+UPDATE,article,{'first_author': 'first author'},{'id': 'id'},,76eb51c7-198c-41c0-85b6-1e55968e824d,"update article with id=1, setting the first author as ""paulo maia""",UPDATE,article,{'first_author': 'Paulo Maia'},{'id': '1'},2,ORIGINAL
+READ,st,{'students': 'students'},{},,53ca217f-9a24-4aa7-a249-7e09549b2689,show all students,READ,student,{},{},0,ORIGINAL
+READ,view_students,{},{},,0846d236-fd60-4916-9aa1-c57510d2121f,view students,READ,student,{},{},0,ORIGINAL
+READ,e_mail,{'students': 'students'},{},,f65ed15c-58ac-4420-8104-88ad13cccb83,fetch the students,READ,student,{},{},0,ORIGINAL
+READ,edward_edwards,{'students': 'students'},{},,f6aeb2ad-e3df-45c6-8b2b-24bcb1407f83,get the students,READ,student,{},{},0,ORIGINAL
+UPDATE,scottish,{'students': 'students'},{'name': 'name'},,8087d298-95d7-4587-8df3-995bbceea730,"for the students with name='anderson', update the name to 'anderson martins'",UPDATE,student,{'name': 'Anderson Martins'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,student,"{'name': 'name', 'student': 'paulo'}",{},,bd2d5f07-ef31-4cc9-bccf-d76a35e55013,please change student with name paulo update age to 30,UPDATE,student,{'age': '30'},{'name': 'Paulo'},2,ORIGINAL
+UPDATE,adolescent,"{'students': 'students', 'name': 'name', '30': 'anderson'}",{},,b6ba0048-5d40-48e9-a61f-7fa18e0078df,"for students with name anderson, update age to 30",UPDATE,student,{'age': '30'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,age,{},None,,9bebded9-db40-46c1-9b10-fb0766ca66e0,"for students, update age to 30",UPDATE,student,{},{},0,ORIGINAL
+UPDATE,student,{},None,,0f3b59cb-cc33-48fe-9ba5-6eacb880300c,update students,UPDATE,student,{},{},0,ORIGINAL
+,,None,None,,9ac21917-01b7-4ef3-9c37-f5792014866a,"please, when students have the name equal to anderson, update the age to 30.",UPDATE,student,{'age': '30'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,anderson,"{'students': 'students', 'age': 'age'}",{'name': 'name'},,69779ab9-e177-4fbd-8350-1eef21440afa,update students setting the age to 42 when name is anderson,UPDATE,student,{'age': '42'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,anderson,"{'students': 'students', 'age': 'age'}",{'name': 'name'},,f7b6c202-1ed4-4e22-89ee-c402a9bb4a07,update students set the age to 42 when name is anderson,UPDATE,student,{'age': '42'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,anderson,{'name': 'name'},{'students': 'with age'},,08cc24ea-2b84-4cc8-95d0-3e27ded2bed7,set students with age to 42 when name is anderson,UPDATE,student,{'age': '42'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,adolescent,"{'students': 'students', 'name': 'name', '42': 'anderson'}",{},,35df0484-6f74-4195-b305-60dbf2445134,"for students with name anderson, update the age to 42",UPDATE,student,{'age': '42'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,adolescent,{'30': 'anderson'},{'student': 'name'},,eb5efec1-826a-4e9e-bddb-9518ce573ffd,please change student with name anderson update age to 30,UPDATE,student,{'age': '30'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,anderson,{'anderson': 'anderson'},{'student': 'name'},,a8d80e14-e792-43b7-9a67-d1a22b1a04af,"please, change the student with name='anderson', updating the age to 30",UPDATE,student,{'age': '30'},{'name': 'Anderson'},2,ORIGINAL
+UPDATE,ages,"{'students': 'students', 'name': 'name'}",{'age': 'age'},,7f7cb152-0c40-47d0-aab5-305a523985c0,"update the age to 42, for students with name='anderson'",UPDATE,student,{'age': '42'},{'name': 'Anderson'},2,ORIGINAL
+ADD,adolescent,"{'student': 'student', 'name': 'name'}",{},,0e217dce-6bee-499b-99f1-7fbf1449338f,add a student with name joseph,ADD,student,{'name': 'Joseph'},{},1,ORIGINAL
+READ,student,{},{},,be0d13c5-52f1-4930-b854-71db51b7adea,get students,READ,student,{},{},0,ORIGINAL
+ADD,ad,"{'title': 'title', ''': 'dome'}",{},,9bffc62b-78c4-41ad-a27b-88245c19bbc5,add article with title 'dome: a no-code tool',ADD,article,{'title': 'DomE: A no-code tool'},{},1,ORIGINAL
+READ,article,{},{},,e79cfae3-4b98-4441-870d-ab84d2efe3c3,get articles,READ,article,{},{},0,ORIGINAL
+UPDATE,article,{'title': 'new title'},{'id': 'id'},,5b755545-dc6f-4504-a821-47e250bcbba9,"update the articles with id=1, setting the title='new title'",UPDATE,article,{'title': 'new title'},{'id': '1'},2,ORIGINAL
+ADD,article,"{'title': 'title', 'author': 'author'}",{},,506d0853-de7d-4706-8f16-924cbcfbd5fd,"add article with title='title 2', author='rodrigo'",ADD,article,"{'title': 'title 2', 'author': 'Rodrigo'}",{},2,ORIGINAL
+UPDATE,article,{'co_author': 'co-author'},{'id': 'id'},,387d113f-cf40-4c6d-8ab5-108687f54f0c,"update the articles with id=1, setting the co-author='layza'",UPDATE,article,{'co_author': 'Layza'},{'id': '1'},2,ORIGINAL
+DELETE,article,{'id': 'id'},{},,e6bed0a2-9087-4916-87c5-1b9b628ecb63,delete the article with id=1,DELETE,article,{},{'id': '1'},1,ORIGINAL
+ADD,age_45,"{'student': 'student', 'age': 'age'}",{},,559cb935-205b-4224-820c-d48b801ead7a,add a student with age=45,ADD,student,{'age': '45'},{},1,ORIGINAL
+READ,e_mail,{'students': 'students'},{},,246403fd-2dc6-4faa-98c0-f77c745e1adf,show students,READ,student,{},{},0,ORIGINAL
+ADD,acme,"{'company': 'name=acme, address=150 coconut street'}",{},,c095cf71-74cb-4b1e-9d68-4abe34c1311d,"include company with name=acme, address=150 coconut street",ADD,company,"{'name': 'ACME', 'address': '150 Coconut Street'}",{},2,ORIGINAL
+READ,,None,None,,c6e44977-e9d6-46cf-907a-434be1d02219,list companies,READ,company,{},{},0,ORIGINAL
+ADD,ad,"{'company': 'name=caju enterprises', 'owner': 'owner', 'street': 'gomes'}",{},,863394d5-19cc-425b-b366-1b460c4b5734,"add another company with name=caju enterprises, owner=anderson gomes and address=200 cumbuco street",ADD,company,"{'name': 'Caju Enterprises', 'owner': 'Anderson Gomes', 'address': '200 Cumbuco Street'}",{},3,ORIGINAL
+,,None,None,,600bd93c-72d6-4012-833f-a1479cf4f06d,which company has caju in its name?,READ,company,{},{'name': 'caju'},1,ORIGINAL
+,,None,None,,d3ae1b4f-e4c7-4c3f-b553-1f670ee3c4ec,"is there a company with ""caju"" in its name?",READ,company,{},{'name': 'caju'},1,ORIGINAL
+DELETE,acme,{'company': 'whose name is acme'},{},,69bfb6f4-b786-45c5-841a-cf0461bfd976,delete the company whose name is acme,DELETE,company,{},{'name': 'ACME'},1,ORIGINAL
+ADD,American_Beauty,"{'company': 'company', 'name': 'name', None: 'beauty'}",{},,dace25ee-fcc5-4964-84f9-dbdd7e89ff3b,add a new company with name=american beauty and owner=kevin spacey,ADD,company,"{'name': 'American Beauty', 'owner': 'Kevin Spacey'}",{},2,ORIGINAL
+READ,sorted,"{'company': 'name', 'names': 'names', 'ascending_order': 'ascending order'}",{},,7407994f-685a-4807-8dac-5e286b7dccce,list company names sorted in ascending order,READ,company,{},{'names': 'sorted'},1,ORIGINAL
+READ,sorted,"{'name': 'name', 'ascending_order': 'ascending order'}",{},,65f6adb6-ecf0-4b13-b1ac-dec958094578,list companies sorted by name in ascending order,READ,company,{},{'name': 'ascending'},1,ORIGINAL
+ADD,American_Beauty,"{'company': 'company', 'name': 'name', 'american_beauty': 'name', 'owner': 'name'}",{},,a21060b3-8365-4948-b30d-8dcdec181793,add a new company with name=american beauty and owner=janjo chiquim,ADD,company,"{'name': 'American Beauty', 'owner': 'janjo chiquim'}",{},2,ORIGINAL
+ADD,American_Beauty,"{'company': 'company', 'name': 'name', 'american_beauty': 'name', 'owner': 'name'}",{},,b47b853f-3cfb-4183-a2a4-638741eedc3f,add a new company with name=american beauty and owner=roger rommel,ADD,company,"{'name': 'American Beauty', 'owner': 'Roger Rommel'}",{},2,ORIGINAL
+READ,ad,{'companies': 'name'},{},,bbb0f3bc-d178-47b8-b4e8-2538c1c6accf,"list companies, sort by name",READ,company,{},{'sort': 'by name'},1,ORIGINAL
+READ,a,{'companies': 'list'},{},,98ef6928-b884-4ea7-9777-f293b831b2fc,list all companies,READ,company,{},{},0,ORIGINAL
+READ,a,{'companies': 'companies'},{},,7a0043d8-eca2-4bac-b614-d99a95d0066e,show all companies,READ,company,{},{},0,ORIGINAL
+ADD,ad_agency,{'company': 'name=roger arrombado'},{},,6131b059-6fa3-428e-96d9-6b01b52818b3,add company with name=roger arrombado,ADD,company,{'name': 'Roger Arrombado'},{},1,ORIGINAL
+READ,cs,{'companies': 'companies'},{},,789c7c9c-7764-4bba-addf-8aeb7a88530d,get companies,READ,company,{},{},0,ORIGINAL
+ADD,construcoes,{'company': 'name=mimoso construcoes'},{},,9245f09f-50a9-4eb3-a097-6fcf2b4ab8de,include a company with name=mimoso construcoes,ADD,company,{'name': 'Mimoso Construcoes'},{},1,ORIGINAL
+ADD,article,"{'abstract': 'abstract', 'good_article': 'good article'}",{},,cf769d5b-6c05-450d-b816-1e89eb341c37,add article with abstract equal to 'this is a good article',ADD,article,{'abstract': 'this is a good article'},{},1,ORIGINAL
+ADD,anderson,{'former_teacher': 'anderson'},{},,ec76a4c5-6bfe-4ca4-91f0-b4c9726ee992,add a former teacher with name = anderson,ADD,former_teacher,{'name': 'Anderson'},{},1,ORIGINAL
+ADD,human_history,"{'abstract': 'abstract', 'good_article': 'good article', 'human_narratives': 'human narratives', 'technology': 'technology', 'evolution': 'evolution', 'impact': 'impact', 'society': 'society'}",{},,92468213-f261-4c15-bb6b-13a7e553aff4,add an article with an abstract equal to 'this is a good article about de human history. the human narratives are around the technology evolution and it's impact on society.',ADD,article,{'abstract': 'this is a good article about de human history. The human narratives are around the technology evolution and it's impact on society.'},{},1,ORIGINAL
+ADD,mary,"{'student': 'student', 'name': 'name'}",{},,5bf36a71-deab-4984-9c2f-ca2bd3f93cbb,add a student with name mary,ADD,student,{'name': 'Mary'},{},1,ORIGINAL
+,,None,None,,9af3d900-1065-4a8d-8b17-63feeb45288a,"i want to add a student with name 'rodrigo', age 20 and his skin color is white",ADD,student,"{'name': 'Rodrigo', 'age': '20', 'skin': 'white'}",{},3,ORIGINAL
+,,None,None,,5b1a4590-f2de-426d-a2fa-c25b5700338c,"now, i want to view all students",READ,student,{},{},0,ORIGINAL
+DELETE,i_want_to_delete_all_students,{'students': 'students'},{},,4ed5a161-3aaa-41d8-bcdf-f2794dee5c3e,i want to delete all students,DELETE,student,{},{},0,ORIGINAL
+DELETE,,None,None,,d87a7194-2345-4008-bcb5-97e72fd8d506,delete students,DELETE,student,{},{},0,ORIGINAL
+DELETE,id,{'students': 'students'},{},,2cbcf5f5-ba68-4ccd-b79f-7ad1ea7f817b,delete students with id <= 4,DELETE,student,{},{'id': '4'},1,ORIGINAL
+DELETE,idx,"{'students': 'students', 'idless': 'idless'}",{},,8cea3b3d-6033-4e51-9a76-810e9aa87e43,delete students with idless than or equal to 4,DELETE,student,{},{},0,ORIGINAL
+DELETE,id,{'students': 'with id less than or equal to 4'},{},,11d85a4e-c25e-4a2a-8143-854518f51e3b,delete students with id less than or equal to 4,DELETE,student,{},{'id': 'less than or equal to 4'},1,ORIGINAL
+DELETE,id_1,"{'students': 'students', 'id': 'id'}",{},,f5ed91b4-31cc-4a7c-b35f-b398b2603e03,"delete students with id=1, id=2 and id=3",DELETE,student,{},{},0,ORIGINAL
+READ,4,"{'students': 'students', 'id': 'id'}",{},,c2d82846-d0c8-461d-9af6-dc235b0eaa3f,get students with id <4,READ,student,{},{'id': '4'},1,ORIGINAL
+READ,san_francisco,"{'students': 'students', 'name': 'name'}",{},,58105a00-1cdb-445e-8634-b2160ea09f44,get all students with name 'rodrigo',READ,student,{},{'name': 'Rodrigo'},1,ORIGINAL
+,,None,None,,9c9018a9-7baf-4f8d-8271-d8ac0fc9d11c,"i want to change the name of a student with name 'rodrigo'. now, i want to set his name as 'rodrigo freitas'",UPDATE,student,{'name': 'Rodrigo Freitas'},{'name': 'Rodrigo'},2,ORIGINAL
+DELETE,update,{'students': 'students'},{},,5573b241-7f06-4894-8532-94b0c256f9df,delete 'update' from all students,DELETE,student,{},{},0,ORIGINAL
+READ,r,"{'students': 'students', 'r': 'r'}",{},,4f8a8445-526d-42d4-9287-7de538d22506,get all students that starts with 'r',READ,student,{},{},0,ORIGINAL
+ADD,romance,"{'film': 'love, rosie', 'genre': 'genre'}",{},,b9b28ab8-d984-4f7a-abd5-f0c20227b85a,"add film with name ""love, rosie"" and genre ""romance""",ADD,film,"{'name': 'love, Rosie', 'genre': 'romance'}",{},2,ORIGINAL
+READ,section,"{'section': 'section', 'film': 'film'}",{},,410ea29c-9028-4dd8-8b9f-59011e37428a,show me the section film,READ,section_film,{},{},0,ORIGINAL
+READ,_film_,{'film': 'film'},{},,f657753f-e858-41fd-8b3e-5b575374b568,show me film,READ,film,{},{},0,ORIGINAL
+ADD,action,"{'film': 'film', 'action': 'batman'}",{},,335cb488-4d0f-482e-8b76-14e99e64ad7d,"add film ""batman (2022)"" with genre=action",ADD,film,{'genre': 'action'},{},1,ORIGINAL
+ADD,action,"{'film': 'film', 'name': 'name', 'action': 'batman'}",{},,a84bd216-312e-4792-8462-22c0cab7ebc2,"add film with name ""batman (2022)"" and genre=action",ADD,film,"{'name': 'Batman (2022)', 'genre': 'action'}",{},2,ORIGINAL
+ADD,action,"{'film': 'film', 'name': 'name', 'crepusculo': 'name', 'drama': 'name'}",{},,95e0a52c-2aa5-46ea-a09e-045f43702243,"add a film with name ""avatar (2022)"" and genre=action, and another film with name=crepúsculo and genre ""drama""",ADD,film,"{'name': 'Avatar (2022)', 'genre': 'action'}",{},2,ORIGINAL
+ADD,action,{'film': 'genre=action'},{},,d2593c60-aaf3-415f-9db4-64b94e0c2cc2,"add a film with name ""avatar (2022)"" and genre=action",ADD,film,"{'name': 'Avatar (2022)', 'genre': 'action'}",{},2,ORIGINAL
+ADD,Crepsculo,"{'film': 'genre', 'drama': 'genre'}",{},,c6bc60b8-5070-4028-8630-c327082d0fe2,"now add film with name=crepúsculo and genre ""drama""",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+ADD,Crepsculo,"{'film': 'film', 'name': 'name', 'crepusculo': 'name', 'drama': 'name'}",{},,3d5af316-e7fd-4b8c-bdac-c0e3b7a59b73,"add film with name=crepúsculo and genre ""drama""",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+ADD,Drama,"{'film': 'genre', 'drama': 'genre'}",{},,79cdf995-88fe-4147-aaec-6d19a929ebdb,"add film with name='crepúsculo' and genre ""drama""",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+ADD,Drama,"{'film': 'film', 'name': 'name', 'crepusculo': 'name', 'drama': 'name'}",{},,2a2696d8-efe9-425f-8e83-bfefd30d1380,"add film film with name='crepúsculo' and genre=""drama""",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+ADD,Drama,"{'film': 'film', 'name': 'name', 'crepusculo': 'name', 'drama': 'name'}",{},,81c861f0-c6ca-40f6-a88d-e80d878da90e,"add film with name='crepúsculo' and genre=""drama""",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+ADD,Crepsculo,{'film': 'genre=drama'},{},,22e0bc0c-d651-4dd8-b4e4-7f0049c5c009,"add film with name ""crepúsculo"" and genre=drama",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+ADD,Crepusculo,{'film': 'genre=drama'},{},,c32d64b2-0c27-4b5f-a68c-3a3598479469,"add film with name ""crepusculo"" and genre=drama",ADD,film,"{'name': 'Crepusculo', 'genre': 'Drama'}",{},2,ORIGINAL
+READ,genre,{'film': 'genre'},{},,1db57a12-4ab4-4a7c-a410-1762dcbb337a,show me film where action is the genre,READ,film,{},{'genre': 'action'},1,ORIGINAL
+READ,action,{'film': 'genre = action'},{},,6d40e2e6-4a70-42a2-8e34-41ae311dad6c,show me film where genre = action,READ,film,{},{'genre': 'action'},1,ORIGINAL
+ADD,anderson,"{'student': 'student', 'name': 'name'}",{},,afe1716e-d9da-4b0b-9985-48b93c3dbe86,add a student with name=anderson,ADD,student,{'name': 'anderson'},{},1,ORIGINAL
+ADD,adolescent,"{'teacher': 'teacher', 'name': 'name'}",{},,7ab7ff23-5617-4829-9206-07c8844a00d8,add a teacher with name equal to 'italo roger',ADD,teacher,{'name': 'Italo Roger'},{},1,ORIGINAL
+READ,teacher,{},{},,2f9a075e-47e8-4e15-a980-e46bda5cfaa9,get all teachers,READ,teacher,{},{},0,ORIGINAL
+READ,teacher,{},{},,0c93ff06-368c-414c-99ee-8349f349b959,get teachers,READ,teacher,{},{},0,ORIGINAL
+READ,st,{'students': 'students'},{},,99e0cb41-747b-452c-9d19-b315598ce021,give me all students,READ,student,{},{},0,ORIGINAL
+ADD,roger,{'former_student': 'roger'},{},,f60f13e6-6a3f-48f7-8bc1-fe74bfb60ed7,add a former student with name = roger,ADD,former_student,{'name': 'Roger'},{},1,ORIGINAL
+ADD,domain__an_experiment,{'’': 'dome'},{},,38fb1afd-ceff-41b8-a417-a25ee576b000,"add a article with title=’dome: an experiment', abstract=’this
+is a cool experiment’, keywords=’dome, ai, machine learning, self-drive systems, python’, data=’2023’, first author=’anderson
+martins gomes’, co-author=’paulo henrique maia’, second author= ‘marina alves costa gomes’",ADD,article,"{'title': 'DoME: an experiment', 'abstract':'this is a cool experiment', 'keywords': 'dome, ai, machine learning, self-drive systems, python', 'date':'2023','first_author': 'anderson martins gomes', 'co_author': 'paulo henrique maia', 'second_author': 'marina alves costa gomes'}",{},7,ORIGINAL
+ADD,ad,{'movie': 'name=final fantasy'},{},,fdde8c45-b7c9-43c2-8153-f3cfc68c58ad,add a movie with name=final fantasy,ADD,film,{'name': 'Final Fantasy'},{},1,ORIGINAL
+READ,film,{},{},,acafae75-44ee-4772-8636-ba2028b70ac1,get movies,READ,film,{},{},0,ORIGINAL
+READ,id_3,{'filmes': 'where id=3'},{},,7856b0b2-5dc2-48aa-9b84-bc61d78c05fc,get filmes where id=3,READ,film,{},{'id': '3'},1,ORIGINAL
+READ,adobe,{'films': 'films'},{},,dc4ca737-52a6-4df7-b99f-06cdecd7b5f4,get films,READ,film,{},{},0,ORIGINAL
+UPDATE,year,{},None,,619c6a6d-5ce2-4c1a-bf40-853c407f7e7a,"update film with id=6, setting year to 2023",UPDATE,film,{'year': '2023'},{'id': '6'},2,ORIGINAL
+ADD,title_et,"{'film': 'film', 'title': 'film', 'et': 'et'}",{},,1a277c43-af56-4daf-a323-a53e2972b314,add film with title=et,ADD,film,{'title': 'ET'},{},1,ORIGINAL
+ADD,adolescent,"{'student': 'student', 'name': 'name'}",{},,86869c90-0203-450d-9561-532a2bde7ea1,add student with name='anderson',ADD,student,{'name': 'anderson'},{},1,ORIGINAL
+READ,adobe,{'films': 'films'},{},,7803ce7d-3a9a-4d37-9721-cfa64cc87dbb,get all films,READ,film,{},{},0,ORIGINAL
+ADD,age_43,"{'student': 'student', 'age': 'age'}",{},,57fbebb6-633e-4434-9a10-ba633a0e6dc1,add a student with age=43,ADD,student,{'age': '43'},{},1,ORIGINAL
+READ,julio,"{'student': 'student', 'name': 'name'}",{},,aa77f8ea-eea6-4c27-ba32-8bd144926ebc,get student with name=julio,READ,student,{},{'name': 'Julio'},1,ORIGINAL
+READ,anderson,"{'student': 'student', 'name': 'name'}",{},,fe67f1ba-70a7-4345-8f45-ef7b78d609e6,get student with name=anderson,READ,student,{},{'name': 'Anderson'},1,ORIGINAL
+ADD,julio,"{'student': 'student', 'name': 'name'}",{},,fb50c379-e9a9-4d51-828d-0bb4725dd41a,add student with name=julio,ADD,student,{'name': 'Julio'},{},1,ORIGINAL
+,,None,None,,0dbce753-819d-45ae-9b26-7f404f1039b9,list student,READ,student,{},{},0,ORIGINAL
+ADD,computer_engineering,"{'course': 'course', 'name': 'name', 'computer': 'computer', 'engineering': 'engineering'}",{},,f8fb436a-acce-4507-9149-ca27e8d8cbc2,add course with name='computer engineering',ADD,course,{'name': 'Computer Engineering'},{},1,ORIGINAL
+READ,a,{},{},,ead39f17-181d-49c1-bddc-e63ec6769c07,list all entities,READ,entities,{},{},0,ORIGINAL
+READ,cs,{'courses': 'courses'},{},,c601405e-7f00-4185-a34b-a789e95cbae2,get courses,READ,course,{},{},0,ORIGINAL
+READ,course,{},{},,80e206e1-9c38-402d-8a13-e2711eb3807f,show course,READ,course,{},{},0,ORIGINAL
+READ,student,{'class': 'name=student'},{},,7f31dbe7-0875-4647-9e7e-b2b3638549eb,get the class with name=student,READ,student,{},{'class': 'student'},1,ORIGINAL
+ADD,abcd,{'student': 'name=abcd'},{},,2eba749e-1294-4b35-8a53-10a59d840d03,add student with name=abcd,ADD,student,{'name': 'abcd'},{},1,ORIGINAL
+ADD,abcdef,"{'student': 'student', 'name': 'name'}",{},,e4f256af-62e8-440c-89ec-0c18cc3f0eb2,add student with name=abcdef,ADD,student,{'name': 'abcdef'},{},1,ORIGINAL
+ADD,phone,{'student': 'phone'},{},,473f6b2c-a465-45e3-9c3a-9bfd17564494,"add student with name='maria', phone=123456",ADD,student,"{'name': 'maria', 'phone': '123456'}",{},2,ORIGINAL
+ADD,st,"{'student': 'student', 'name': 'name'}",{},,b6945293-2124-40ef-9c0a-b2fc31dbabcf,add student with name joseph,ADD,student,{'name': 'Joseph'},{},1,ORIGINAL
+UPDATE,id4,{'id': 'id'},{'student': 'age'},,c69e392b-bf18-4e11-af75-72bf02638f4f,update student age=40 when id= 4,UPDATE,student,{'age': '40'},{'id': '4'},2,ORIGINAL
+ADD,domain__a_reference_architecture,"{'title': 'title', None: 'dome'}",{},,3b2d19be-ce89-4a9d-a163-0e5d019adead,"add an article with title='dome: a reference architecture, publish year = 2023",ADD,article,"{'title': 'DoME: A Reference Architecture', 'publish_year':'2023'}",{},2,ORIGINAL
+ADD,reseach_architecture,"{'title': 'title', None: 'dome'}",{},,8638395b-9474-41e6-bcc5-c9b9f02d8861,"add an article with title='dome: a reference architecture', and the publish year = 2023",ADD,article,"{'title': 'DoME: A Reference Architecture', 'publish_year':'2023'}",{},2,ORIGINAL
+ADD,2023,{'2023': 'dome'},{},,20e25be2-059e-4e45-9172-bdc3a181ea5c,"add an article with title='dome: a reference architecture', and year = 2023",ADD,article,"{'title': 'DoME: A Reference Architecture', 'year': '2023'}",{},2,ORIGINAL
+READ,article,{},{},,1e1fd509-143e-47a6-96c1-066af1ce6c36,get all articles,READ,article,{},{},0,ORIGINAL
+ADD,article,"{'title': 'another article', 'author': 'author'}",{},,e36c42bb-6c27-4dfa-82c1-487cb90c3657,"add article with title='another article', and author='charles bronson'",ADD,article,"{'title': 'Another Article', 'author': 'Charles Bronson'}",{},2,ORIGINAL
+READ,article,{},{},,db7f8385-7aa3-496d-ae05-a2cd8d5b90e7,show me all articles,READ,article,{},{},0,ORIGINAL
+UPDATE,article,{'author': 'author'},{'id': 'id'},,e5329b4d-4d70-4350-8f35-ff76ba3ad377,"update the article with id=1, setting the author='madona'",UPDATE,article,{'author': 'Madona'},{'id': '1'},2,ORIGINAL
+DELETE,article,{},{},,edeff154-5609-4327-9eda-abd1fa1219aa,i want you to show me all articles,READ,article,{},{},0,ORIGINAL
+ADD,quantum_factoring_algorithm,"{'title': 'experiment', 'experimental_demonstration': 'experiment', ''': 'shor'}",{},,a7196210-9d21-4cdd-8f8c-03de5249d276,"add a new article with title ""experimental demonstration of shor's quantum factoring algorithm using qubits""",ADD,article,{'title': 'Experimental demonstration of Shor's quantum factoring algorithm using qubits'},{},1,ORIGINAL
+READ,article,{},{},,f1474527-df66-42d1-8ee3-e776486b932b,show all articles,READ,article,{},{},0,ORIGINAL
+UPDATE,article,"{'id': 'id', 'article': 'shor'}",{},,8fd994b8-6a04-4400-a6ff-20ecadf9983e,"update article with id = 2, but now i want to set title as 'experimental demonstration of shor's quantum factoring algorithm using qubits'",UPDATE,article,{'title': 'Experimental demonstration of Shor's quantum factoring algorithm using qubits'},{'id': '2'},2,ORIGINAL
+ADD,Quantum_machine_learning,{''': 'quantum'},{},,9e6dd3ff-678f-4fed-b06a-cf222c962472,add a new article with title 'quantum machine learning',ADD,article,{'title': 'Quantum Machine Learning'},{},1,ORIGINAL
+READ,article,{},{},,fdc763ec-a861-4c1c-a1d0-c476bbc63351,show me articles,READ,article,{},{},0,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,ec74596c-605d-42db-a2c6-575a6fcc4ed6,"update the article with id 3, but now i want to set its year=2022",UPDATE,article,{'year': '2022'},{'id': '3'},2,ORIGINAL
+READ,article,{},{},,2c2fcb90-7046-4f24-a810-e37ed7c51b1a,show articles,READ,article,{},{},0,ORIGINAL
+ADD,Futuro_deletado,"{'title': 'title', 'deletado': 'deletado'}",{},,a89e7fae-b765-4b9b-82a5-c4e79b78a788,add a new article with title='futuro deletado,ADD,article,{'title': 'futuro deletado'},{},1,ORIGINAL
+DELETE,article,{'title': 'futuro deletado'},{},,9231e248-bbcc-41be-8a38-502f52a4fd97,delete all articles with title='futuro deletado',DELETE,article,{},{'title': 'futuro deletado'},1,ORIGINAL
+READ,blockages,{},{},,a7255605-f748-478e-b2f8-fb165f29b3e9,get blockages,READ,blockages,{},{},0,ORIGINAL
+ADD,222_road__km_13,{'km': '222 road'},{},,5bc2ed2e-6b4b-43a1-a354-0acad02f0792,"add a blockade with the localization ’222 road, km 13’",ADD,blockade,"{'localization': '222 road, km 13'}",{},1,ORIGINAL
+READ,blockages,{},{},,dd66d570-b3d1-4696-a64c-2e7fa83a73a8,show me all blockages,READ,blockages,{},{},0,ORIGINAL
+READ,blockade,{},{},,de69bee1-5fe2-42ca-98f4-f7dc9065d67e,show me all blockades,READ,blockade,{},{},0,ORIGINAL
+ADD,222_road__km_13,"{'localization': '222 road, km 13', 'type': 'localization', 'partial_blockade': 'localization'}",{},,bbcc9889-1c85-4c0f-80a0-53827b87031b,"add a blockade with the localization ’222 road, km 13’, and type='partial blockade'",ADD,blockade,"{'localization': '222 road, km 13', 'type': 'partial blockade'}",{},2,ORIGINAL
+READ,blockade,{},{},,3816e5be-6c86-4df1-ac7d-21ab7c910037,get blockades,READ,blockade,{},{},0,ORIGINAL
+ADD,116_road__km_105,"{'localization': '116 road, km 105', 'type': 'localization', 'partial_blockade': 'localization'}",{},,43ad2b0d-3583-4831-ab09-b84cf0fd1694,"add a blockade with the localization ’116 road, km 105’, and type='partial blockade'",ADD,blockade,"{'localization': '116 road, km 105', 'type': 'partial blockade'}",{},2,ORIGINAL
+ADD,atom,{'title': 'title'},{},,272452ef-057c-456c-8a9b-5cfe34c4e510,add article with title 'shor's quantum',ADD,article,{'title': 'Shor's Quantum'},{},1,ORIGINAL
+ADD,alves,"{'student': 'student', 'name': 'name'}",{},,acaf8303-de58-460c-84df-1bbd8638f0ca,add a student with name='mariana alves',ADD,student,{'name': 'Mariana Alves'},{},1,ORIGINAL
+READ,st,{'students': 'students'},{},,656d24ba-ddfe-4746-be8f-248c8682d5fc,show me all students,READ,student,{},{},0,ORIGINAL
+READ,aritcles,{'aritcles': 'aritcles'},{},,c1ccd57d-7863-43a2-bd71-0d513efebd92,show me all aritcles,READ,aritcles,{},{},0,ORIGINAL
+,,None,None,,d6bd90c8-0e7f-495c-9551-6da6adc86dee,showme all articles,READ,article,{},{'showme': 'all articles'},1,ORIGINAL
+ADD,adobe_free,"{'title': 'title', 'cautious_adaptation': 'title', 'defiant_components': 'title'}",{},,f40bf2cc-6559-4097-a868-2e39758e926f,add an article with title='cautious adaptation of defiant components',ADD,article,{'title': 'Cautious Adaptation of Defiant Components'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,5635849c-d00b-4b11-9197-ee2150144b4e,"update the article with id=6, setting the year=2019",UPDATE,article,{'year': '2019'},{'id': '6'},2,ORIGINAL
+READ,article,{},{},,0565ead6-3da4-4845-b0ee-73f2a5b6915c,retrieve articles,READ,article,{},{},0,ORIGINAL
+,,None,None,,6e758715-a5b8-43b8-bb55-d5e37660d17c,view articles,READ,article,{},{},0,ORIGINAL
+,,None,None,,e59a51fb-eb74-48bf-aee8-550e199372f0,present me the list of articles,READ,article,{},{'list': 'articles'},1,ORIGINAL
+DELETE,article,{'year': 'year'},{},,34e27b8d-a5a3-40b4-9c48-eaaea017e105,delete all articles with year=2019,DELETE,article,{},{'year': '2019'},1,ORIGINAL
+ADD,pokemon,{'name': 'name'},{},,1c7468d4-2c5e-4d83-a51f-24e3fc1afe19,"please, add a pokemon with name=""pikachu""",ADD,pokemon,{'name': 'Pikachu'},{},1,ORIGINAL
+READ,pokemon,{},{},,62bc0bc2-f792-46bd-967b-9af45489807c,get pokemon,READ,pokemon,{},{},0,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,8a32d4ac-fb56-4aed-b291-5744d28388f6,"update the pokemon with name ""pikachu"" and set its type=""electric""",UPDATE,pokemon,{'type': 'Electric'},{'name': 'pikachu'},2,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,602d2187-b223-4cff-a93b-3954b794e1dd,"update a pokemon with name=""pikachu"" by adding ""evolve_to""=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,0a321e5c-6d46-4ce4-b1a6-e1a701899190,"update a pokemon with name=""pikachu"" by setting ""evolve_to""=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,5fc5fd94-b5be-4df2-8b64-ed34a051805e,"update the pokemon with name=""pikachu"", setting ""evolve_to""=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,c72d9de2-1ef1-4a1e-9657-cc5a419aaf12,"update a pokemon with name=""pikachu"" by setting evolve_to=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,fc490ff5-cf3a-4c75-aa87-d8d687823d6b,"update the pokemon with name=""pikachu"", setting evolve_to=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{},None,,ee278f56-4687-4a43-ad2d-ae225a865fe9,"update the pokemon with name=""pikachu"", setting evolveto=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{},None,,f6de1f92-4291-405a-8416-c22569885a54,"update the pokemon with name ""pikachu"", setting evolve_to=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,{},None,,b3d385ab-642c-4fa9-a5e0-8dc35943f232,"update the pokemon with name ""pikachu"", setting evolveto=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,"{'name': 'name', 'pokemon': 'pikachu'}",{},,bb050f32-80ee-4497-9e95-dd2ad180ddc8,"update the pokemon with name=""pikachu"", setting the evolveto=""raichu""",UPDATE,pokemon,{'evolveto': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+UPDATE,pokemon,"{'evolveto': 'evolveto', 'raichu': 'evolveto'}",{'id': 'id'},,d776d06f-27ca-43de-b32a-aa4a7514254a,"update the pokemon with id=1, setting the evolveto=""raichu""",UPDATE,pokemon,{'evolveto': 'Raichu'},{'id': '1'},2,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,db3ec854-e987-4ccd-b6ad-905b981f9ab8,"update the pokemon with name=""pikachu"", setting the evolution=""raichu""",UPDATE,pokemon,{'evolution': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+READ,pokemon,{'name': 'name'},{},,59cdc374-5a06-4e14-ae18-6e970010784b,"get pokemon with name=""pikachu""",READ,pokemon,{},{'name': 'Pikachu'},1,ORIGINAL
+READ,pokemon,{'name': 'name'},{},,e6844433-5baf-42a8-9cdf-e067c5e44a6c,get pokemon with name pikachu,READ,pokemon,{},{'name': 'Pikachu'},1,ORIGINAL
+ADD,eevee,"{'pokemon': 'pokemon', 'name': 'name', 'eevee': 'eevee'}",{},,8ea2f63c-40c0-4720-87b6-3d312d82d180,"add a pokemon with name=""eevee"" and type=""normal""",ADD,pokemon,"{'name': 'Eevee', 'type': 'Normal'}",{},2,ORIGINAL
+READ,pokemon,{},{},,815d66ee-de1e-495a-ba9d-9da1bad8fab9,view pokemon,READ,pokemon,{},{},0,ORIGINAL
+READ,pokemon,{},{},,d9f5af2b-e6de-49e1-9a65-a2e0ff17688b,show me all pokemon,READ,pokemon,{},{},0,ORIGINAL
+DELETE,pokemon,{'name': 'name'},{},,a87910d3-6934-4e50-a875-34ecd44554ca,"delete the pokemon with name=""eevee""",DELETE,pokemon,{},{'name': 'Eevee'},1,ORIGINAL
+READ,pokemon,{},{},,576d2fff-6d3c-44af-a069-94a1cf102353,get pokemons,READ,pokemon,{},{},0,ORIGINAL
+READ,article,{},{},,ba13a228-0422-4b1a-91f5-1d15a4fb883a,show me all article,READ,article,{},{},0,ORIGINAL
+ADD,dragonfly,{'title': 'title'},{},,b94a70e9-b977-4e48-aa2a-7d4859c27e8b,"add an article with title ""dragonfly""",ADD,article,{'title': 'Dragonfly'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,933c37b8-5891-40ef-94f3-abb1a0931904,"update the article with id=7, setting the year=2020.",UPDATE,article,{'year': '2020'},{'id': '7'},2,ORIGINAL
+UPDATE,article,{'year1': 'year1'},{'id': 'id'},,0232d2bf-ee4c-4cae-acb7-97498af6dbaf,"update the article with id=7, setting the year1=2020",UPDATE,article,{'year1': '2020'},{'id': '7'},2,ORIGINAL
+DELETE,article,{'year': 'year'},{},,d40d4dcd-a127-4fd7-8967-9277596844e9,delete all articles with year=2020,DELETE,article,{},{'year': '2020'},1,ORIGINAL
+,,None,None,,65c8290e-c54f-4ad6-bd03-b5690ea7fece,"i would like to add an article named ""advances in natural language processing"" and author=julia hirschberg and christopher d. manning",ADD,article,"{'name': 'advances in natural language processing', 'author': 'JULIA HIRSCHBERG and CHRISTOPHER D. MANNING'}",{},2,ORIGINAL
+ADD,Advances_in_Natural_Language_Processing,"{'article': 'article', 'manning': 'advances'}",{},,6857ebbe-7829-4790-ad79-d8708020730c,"add article named ""advances in natural language processing"" and author=julia hirschberg and christopher d. manning",ADD,article,"{'name': 'advances in natural language processing', 'author': 'JULIA HIRSCHBERG and CHRISTOPHER D. MANNING'}",{},2,ORIGINAL
+,,None,None,,4e1009af-bc70-420f-bf3c-ab1ed3b86605,"i would like to add an article with name ""advances in natural language processing"" and author=julia hirschberg and co-author= christopher d. manning",ADD,article,"{'name': 'Advances in natural language processing', 'author': 'JULIA HIRSCHBERG', 'co_author': 'CHRISTOPHER D. MANNING'}",{},3,ORIGINAL
+ADD,Advances_in_Natural_Language_Processing,"{'article': 'article', 'name': 'name', 'manning': 'advances'}",{},,2a05fbc3-0d1f-49f4-a06e-d1955c4001f3,"add article with name ""advances in natural language processing"" and author=julia hirschberg and co-author= christopher d. manning",ADD,article,"{'name': 'Advances in natural language processing', 'author': 'JULIA HIRSCHBERG', 'co_author': 'CHRISTOPHER D. MANNING'}",{},3,ORIGINAL
+ADD,advances_in_natural_language_processing,"{'article': 'article', 'name': 'name', 'manning': 'advances'}",{},,fc5dbcc1-4526-497d-9283-86be67b5ebe9,"add an article with name ""advances in natural language processing"", author=julia hirschberg, co-author= christopher d. manning",ADD,article,"{'name': 'Advances in natural language processing', 'author': 'JULIA HIRSCHBERG', 'co_author': 'CHRISTOPHER D. MANNING'}",{},3,ORIGINAL
+ADD,advances_in_natural_language_processing,"{'article': 'article', 'name': 'name', 'manning': 'advances'}",{},,8aa37221-0a44-42ff-8e1e-ce3746da54bd,"add article with name ""advances in natural language processing"", author=julia hirschberg, co-author= christopher d. manning",ADD,article,"{'name': 'Advances in natural language processing', 'author': 'JULIA HIRSCHBERG', 'co_author': 'CHRISTOPHER D. MANNING'}",{},3,ORIGINAL
+READ,authors,{'authors': 'authors'},{},,b6e746b2-6814-47e9-8160-84c762c30225,show me all authors,READ,authors,{},{},0,ORIGINAL
+ADD,Dome__A_Reference_Architecture,"{'title': 'title', ''': 'dome'}",{},,bd10d73f-e58e-4063-a285-1fc58fa04c81,add an article with title='dome: a reference architecture',ADD,article,{'title': 'DoME: A Reference Architecture'},{},1,ORIGINAL
+READ,article,{},{},,d1ae7c46-7ac7-4fa9-b18e-28ffc1647aed,show me article,READ,article,{},{},0,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,870d6b79-5790-4db6-95a8-52063d93ffd7,update the article with id=8 setting the year=2015,UPDATE,article,{'year': '2015'},{'id': '8'},2,ORIGINAL
+UPDATE,article,"{'setting': 'name='', 'title': 'title', 'advances': 'advances', 'natural_language': 'natural language'}",{'id': 'id'},,776416c3-611b-4c24-85a0-bf017af5de58,"update the article with id=8 setting name="""" and title=""advances in natural language processing""",UPDATE,article,"{'name': '', 'title': 'Advances in natural language processing'}",{},2,ORIGINAL
+UPDATE,article,{'setting': 'title='advances in natural language processing'},{'id': 'id'},,5102255c-d853-4a5b-9ae1-7001d6530d59,"update the article with id=8 setting title=""advances in natural language processing""",UPDATE,article,{'title': 'Advances in natural language processing'},{'id': '8'},2,ORIGINAL
+READ,2015,"{'articles': 'articles', 'year': 'year'}",{},,78c82742-136a-4dc2-8ca4-46b3b83853d1,show me articles with year=2015,READ,article,{},{'year': '2015'},1,ORIGINAL
+UPDATE,article,"{'title': 'title', 'advances': 'advances', 'natural_language': 'natural language'}",{'id': 'id'},,1224c60c-6cb6-452b-9326-038a2787c139,"update the article with id=8 setting the title=""advances in natural language processing""",UPDATE,article,{'title': 'Advances in natural language processing'},{'id': '8'},2,ORIGINAL
+READ,yaer,{'articles': 'articles'},{},,accb26e9-1034-4922-bb41-91a4b6e875e8,show me articles where yaer=2015,READ,article,{},{},0,ORIGINAL
+READ,2015,"{'articles': 'articles', 'year': 'year'}",{},,496664ac-e339-4475-9c12-30afe33821aa,show me articles where year=2015,READ,article,{},{'year': '2015'},1,ORIGINAL
+DELETE,article,{'attribute': 'name'},{},,67773a1e-c811-4091-ad32-7afd3d66ec67,delete the attribute name  from article,DELETE,attribute,{},{'attribute': 'name'},1,ORIGINAL
+DELETE,article,{'name': 'name'},{},,00cc7fdf-4719-4220-8239-9eb3497817ef,delete name from article,DELETE,article,{},{'name': 'article'},1,ORIGINAL
+UPDATE,article,{'name': 'name'},{'id': 'id'},,d3659216-3c03-44bf-a2cf-ffbfd40ee3a6,"update the article with id=8 setting the name=""""",UPDATE,article,{'name': ''},{'id': '8'},2,ORIGINAL
+UPDATE,article,{'name': 'name'},{'id': 'id'},,7e5a47da-29f0-414d-92d6-2d278725f1aa,"update the article with id=8 setting the name="" """,UPDATE,article,{'name': ' '},{'id': '8'},2,ORIGINAL
+UPDATE,article,{'name': 'name'},{'id': 'id'},,2127c6c2-5fa8-4d54-bb60-0e1b7de2d85e,"update the article with id=8 setting the name=a""""",UPDATE,article,{'name': 'a'},{'id': '8'},2,ORIGINAL
+UPDATE,article,{'name': 'name'},{'id': 'id'},,af3381b6-3588-449d-a534-d7d3b6a07ef3,update the article with id=8 setting the name=null,UPDATE,article,{'name': 'null'},{'id': '8'},2,ORIGINAL
+UPDATE,article,{'name': 'name'},{'id': 'id'},,bb4c32a5-79da-4ac0-8d07-4de10fb27b92,update the article with id=8 deleting the name,UPDATE,article,{'name': ''},{'id': '8'},2,ORIGINAL
+DELETE,article,{'id': 'id'},{},,c576f7f1-9272-4010-b5aa-f502ce43d83d,delete the article with id=9,DELETE,article,{},{'id': '9'},1,ORIGINAL
+ADD,experimental_framework,"{'name': 'name', 'rescue': 'name', 'operations': 'operations', 'natural_disaster': 'natural disaster', 'keywords': 'name', 'experimental_framework': 'experimental framework', 'simulation': 'simulation', 'benchmark': 'simulation'}",{},,e9419a9a-a7c8-47f3-ba0c-b973b446570c,"add a article with name ""experimental framework to simulate rescue operations after a natural disaster"" and keywords= experimental framework, simulation, benchmark",ADD,article,"{'name': 'Experimental Framework to Simulate Rescue Operations after a Natural Disaster', 'keywords': 'Experimental framework, Simulation, Benchmark'}",{},2,ORIGINAL
+UPDATE,experimental_framework__simulation__benchmark,"{'experimental_framework': 'simulation', 'benchmark': 'simulation', 'year': 'year'}",{'article': 'name'},,884b9b83-506e-4053-835a-e4fef2cf32a2,"update the article with name ""experimental framework, simulation, benchmark"" setting year=2020",UPDATE,article,{'year': '2020'},"{'name': 'Experimental framework, Simulation, Benchmark'}",2,ORIGINAL
+UPDATE,experimental_framework_to_simulate_rescue_operations_after_a_natural_disaster,{'setting': 'year=2020'},"{'name': 'name', 'experimental_framework': 'experimental framework', 'rescue': 'name', 'operations': 'operations', 'natural_disaster': 'natural disaster'}",,a53d0548-22a5-4cc0-a289-69351cb10a2a,"update the article with name ""experimental framework to simulate rescue operations after a natural disaster"" setting year=2020",UPDATE,article,{'year': '2020'},{'name': 'Experimental framework to simulate rescue operations after a natural disaster'},2,ORIGINAL
+UPDATE,experimental_framework,{},None,,0be65ee0-06aa-4d8a-9d43-2573ced402dd,"update the article with name=""experimental framework to simulate rescue operations after a natural disaster"" setting year=2020",UPDATE,article,{'year': '2020'},{'name': 'Experimental framework to simulate rescue operations after a natural disaster'},2,ORIGINAL
+UPDATE,experimental_framework,{'natural_disaster': 'year=2020'},"{'name': 'name', 'rescue': 'name', 'operations': 'operations'}",,b8808059-c0f4-44d4-b809-f990666a0f36,update the article with name=experimental framework to simulate rescue operations after a natural disaster setting the year=2020,UPDATE,article,{'year': '2020'},{'name': 'Experimental framework to simulate rescue operations after a natural disaster'},2,ORIGINAL
+UPDATE,year_2020,{},None,,3f7bc604-74f5-4344-8f57-bba3798f16fe,"update the article with keywords ""experimental framework, simulation, benchmark"" setting the year=2020",UPDATE,article,{'year': '2020'},"{'keywords': 'Experimental framework, Simulation, Benchmark'}",2,ORIGINAL
+READ,2013,"{'articles': 'articles', 'year': 'year'}",{},,c7c3c03f-4cd1-4766-ac75-3b7058b3245e,show me articles where year > 2013,READ,article,{},{'year': '2013'},1,ORIGINAL
+READ,2015,"{'articles': 'articles', 'year': 'year'}",{},,77a5d422-06ee-4fa9-af6a-edfadbe82b70,show me articles where year != 2015,READ,article,{},{'year': '2015'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,92de7cbe-9d89-4845-bf10-4d8eaa319726,show articles with id > 6,READ,article,{},{'id': '6'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,98c2f0b5-ce01-49e5-a9eb-edaa24b725cf,show me articles with id=9,READ,article,{},{'id': '9'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,35713034-4adf-4a1d-9a7d-627022cb605a,show me article where id > 6,READ,article,{},{'id': '6'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,38aea71b-1731-4f7e-a461-aece82019d33,show me article where id = 6,READ,article,{},{'id': '6'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,ded56258-1aab-4dc8-9182-086c4a9d5fa8,show me article where id=9,READ,article,{},{'id': '9'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,63ece951-a155-4ce8-b9d4-a6924f8ddefc,show me article where id=10,READ,article,{},{'id': '10'},1,ORIGINAL
+ADD,city,"{'name': 'name', 'city': 'fortaleza'}",{},,54e94a98-3c69-4c8a-a278-0ba0a0569742,add city with name=fortaleza and state=ceará,ADD,city,"{'name': 'Fortaleza', 'state': 'Ceará'}",{},2,ORIGINAL
+ADD,germany,"{'city': 'city', 'name': 'name', 'germany': 'berlin'}",{},,ce4677df-d8e5-4c78-9bf5-f8b9ffdeb6dc,"add city with name=berlin, country=germany, population=3.645 million",ADD,city,"{'name': 'Berlin', 'country': 'Germany', 'population': '3.645 million'}",{},3,ORIGINAL
+READ,city,{},{},,8ac10d3e-fea6-4506-96f5-814192e323cf,show me city,READ,city,{},{},0,ORIGINAL
+DELETE,city,{},{},,2f07d4f5-56a8-47a4-8f19-52964a2f3644,delete all cities,DELETE,city,{},{},0,ORIGINAL
+DELETE,city,{'id': 'id'},{},,0e2395fe-4969-43ab-8b59-028390926bdd,delete city where id=1 and id=2,DELETE,city,{},{'id': '1'},1,ORIGINAL
+DELETE,city,{'city': 'city'},{},,0fa48ee3-fb97-405b-b40a-368261dc10c5,delete city where id-2,DELETE,city,{},{},0,ORIGINAL
+DELETE,city,{'id': 'id'},{},,5958a9cf-53ac-424d-be3e-732d3fa04ee7,delete city where id=2,DELETE,city,{},{'id': '2'},1,ORIGINAL
+ADD,teste,{'city': 'number'},{},,8628cd9a-6230-441d-87d3-71aac20ac120,add city with name= teste and number=1,ADD,city,"{'name': 'teste', 'number': '1'}",{},2,ORIGINAL
+ADD,teste,{'city': 'number=2'},{},,4d40d978-692c-452f-af44-1d74af6e430e,add city with name= teste and number=2,ADD,city,"{'name': 'teste', 'number': '2'}",{},2,ORIGINAL
+DELETE,city,"{'name': 'name', 'teste': 'name'}",{},,0464fe13-e851-429c-86b5-560d7e4cb50f,delete city where name=teste,DELETE,city,{},{'name': 'teste'},1,ORIGINAL
+DELETE,city,{'city': 'city'},{},,ab113c63-bafa-4a8a-8c3c-307644a05071,"delete city where name=""teste""",DELETE,city,{},{'name': 'teste'},1,ORIGINAL
+DELETE,city,{'city': 'city'},{},,b804d014-fde8-4342-9ae5-b610c8a3e0d2,delete city where number=1,DELETE,city,{},{'number': '1'},1,ORIGINAL
+DELETE,city,"{'name': 'name', 'teste': 'name'}",{},,c76e1336-6528-4c38-a52b-9b297841895d,delete all city with name=teste,DELETE,city,{},{'name': 'teste'},1,ORIGINAL
+DELETE,city,"{'name': 'name', 'teste': 'name'}",{},,fa212e10-1c7e-469a-bb0d-d57f66e7a6f7,"delete all city with name=""teste""",DELETE,city,{},{'name': 'teste'},1,ORIGINAL
+DELETE,city,{'number': 'number'},{},,5de08123-711c-42e8-ac09-1943fa423f71,delete all city where number=1,DELETE,city,{},{'number': '1'},1,ORIGINAL
+DELETE,city,{'id': 'id'},{},,3416c288-9742-4ba5-985a-54ccab4c2d10,delete city where id=4,DELETE,city,{},{'id': '4'},1,ORIGINAL
+DELETE,city,{'name': 'name'},{},,efe52428-9716-4c7e-8f5f-4f4c2df9debd,delete city where name=fortaleza,DELETE,city,{},{'name': 'Fortaleza'},1,ORIGINAL
+ADD,city,"{'name': 'name', 'city': 'fortaleza'}",{},,fc431626-2303-47f4-9128-d5801e271f90,add city with name fortaleza and state=ceará,ADD,city,"{'name': 'Fortaleza', 'state': 'Ceará'}",{},2,ORIGINAL
+ADD,city,"{'name': 'name', 'city': 'fortaleza'}",{},,88e63434-d2f8-4588-83e1-311c7b859da9,"add city with name ""fortaleza"" and state=ceará",ADD,city,"{'name': 'Fortaleza', 'state': 'Ceará'}",{},2,ORIGINAL
+DELETE,city,{'city': 'city'},{},,4abe92a3-2fca-48f2-a25e-ba99c7aba441,delete city where state=ceará,DELETE,city,{},{'state': 'Ceará'},1,ORIGINAL
+DELETE,city,{'city': 'city'},{},,3372b0ee-94de-4984-8a14-0a2cc970ae9f,"delete city where state=""ceará""",DELETE,city,{},{'state': 'Ceará'},1,ORIGINAL
+READ,pokemon,{},{},,6986377e-c6f1-4876-8e14-49e356d39480,show pokemons,READ,pokemon,{},{},0,ORIGINAL
+DELETE,city,{'city': 'city'},{},,adbb556d-0266-48a3-91d1-aafc9959f404,"delete city where name=""fortaleza""",DELETE,city,{},{'name': 'Fortaleza'},1,ORIGINAL
+READ,pokemon,{},{},,24569f78-9755-4965-9b35-152d2130a2b0,show me pokemons,READ,pokemon,{},{},0,ORIGINAL
+READ,city,{},{},,98252c33-81e0-4306-949d-d128376d944d,get city,READ,city,{},{},0,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,38e89641-4881-4bca-95ec-b6be7880dcdf,"update a pokemon with name=""pikachu"" by setting evolve to=""raichu""",UPDATE,pokemon,{'evolve_to': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+DELETE,city,{'city': 'city'},{},,e2f1d9e5-ce32-41a1-8532-554df689e986,delete city where id=8,DELETE,city,{},{'id': '8'},1,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,ff06331a-e35c-4463-aad7-1b5ae1fd4466,"update a pokemon with name=""pikachu"" by setting evolvution =""raichu""",UPDATE,pokemon,{'evolvution': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+DELETE,city,"{'name': 'name', 'fortaleza': 'name'}",{},,aadefe79-73c8-435a-8ef2-0ea0758f64c7,delete all city where name=fortaleza,DELETE,city,{},{'name': 'Fortaleza'},1,ORIGINAL
+UPDATE,pokemon,{'pokemon': 'pikachu'},{'name': 'name'},,542ce8b9-9e15-4774-9856-1b12ef6ff19f,"update a pokemon with name=""pikachu"" by setting evolution to=""raichu""",UPDATE,pokemon,{'evolution': 'Raichu'},{'name': 'Pikachu'},2,ORIGINAL
+READ,pokemon,{},{},,f5d8228e-3d15-4532-91ff-160ca142a6c9,view all pokemons,READ,pokemon,{},{},0,ORIGINAL
+READ,pokemon,{},{},,b6b44821-d1d3-4521-82d1-f33f8bc9d09c,view the pokemon,READ,pokemon,{},{},0,ORIGINAL
+ADD,v_measure__a_conditional_entropy_based_external_cluster_evaluation_measure,"{'title': 'v-measure: a conditional entropy-based external cluster evaluation measure', 'author': 'author', '2007': 'rosenberg'}",{},,b7510abe-0446-4fa3-ac33-fb1892993242,"add article with title ""v-measure: a conditional entropy-based external cluster evaluation measure"", author ""v-measure: a conditional entropy-based external cluster evaluation measure"", co-author ""andrew rosenberg"" and year=2007",ADD,article,"{'title': 'V-measure: A conditional entropy-based external cluster evaluation measure', 'author': 'Andrew Rosenberg', 'year': '2007'}",{},3,ORIGINAL
+ADD,v_measure,"{'title': 'v-measure: a conditional entropy-based external cluster evaluation measure', 'author': 'author', 'v-measure': 'rosenberg'}",{},,19a8d5cd-4284-4561-a9ed-45b2d82d173e,"add article with title ""v-measure: a conditional entropy-based external cluster evaluation measure"", author=""julia hirschberg"", co-author=""andrew rosenberg"" and year=2007",ADD,article,"{'title': 'V-measure: A conditional entropy-based external cluster evaluation measure', 'author': 'JULIA HIRSCHBERG', 'co_author': 'Andrew Rosenberg', 'year': '2007'}",{},4,ORIGINAL
+ADD,v_measure,"{'title': 'v-measure: a conditional entropy-based external cluster evaluation measure', 'author': 'author', 'v-measure': 'rosenberg'}",{},,1955e89e-45a8-4d5a-84d7-1c0b3290d0be,"add an article with title=""v-measure: a conditional entropy-based external cluster evaluation measure"", author=""julia hirschberg"", co-author=""andrew rosenberg"" , year=2007",ADD,article,"{'title': 'V-measure: A conditional entropy-based external cluster evaluation measure', 'author': 'JULIA HIRSCHBERG', 'co_author': 'Andrew Rosenberg', 'year': '2007'}",{},4,ORIGINAL
+ADD,v_measure,"{'title': 'v-measure: a conditional entropy-based external cluster evaluation measure', 'author': 'author'}",{},,8449b0a6-1a0d-4925-be8e-ad6418f5976b,"add article with title ""v-measure: a conditional entropy-based external cluster evaluation measure"", author=""julia hirschberg""",ADD,article,"{'title': 'V-measure: A conditional entropy-based external cluster evaluation measure', 'author': 'JULIA HIRSCHBERG'}",{},2,ORIGINAL
+UPDATE,v_measure,"{'article': 'article', 'title': 'article', 'evaluation': 'evaluation', 'measure': 'evaluation', 'setting': 'evaluation', 'co_author': 'co-author'}",{'external_cluster': 'conditional entropy-based'},,688bfdf8-60b6-4824-bbf7-37633ae618f5,"update the article where title=""v-measure: a conditional entropy-based external cluster evaluation measure"" setting  co-author=""andrew rosenberg""",UPDATE,article,{'co_author': 'Andrew Rosenberg'},{'title': 'V-measure: A conditional entropy-based external cluster evaluation measure'},2,ORIGINAL
+,,None,None,,7efd8d38-26f6-41f8-a3a1-6651af5d304f,"update article with id=11 setting co-author=""andrew rosenberg"" and year=2007",UPDATE,article,"{'co_author': 'Andrew Rosenberg', 'year': '2007'}",{'id': '11'},3,ORIGINAL
+,,None,None,,4575c69d-fd44-4575-b748-3fb6d9b7504b,"update article where id=11 setting co-author=""andrew rosenberg""",UPDATE,article,{'co_author': 'Andrew Rosenberg'},{'id': '11'},2,ORIGINAL
+UPDATE,article,"{'setting': 'setting', 'co_author': 'co-author', 'article': 'rosenberg'}",{'id': 'id'},,a7b85746-5ad3-4cd4-8f75-23953273386e,"update the article with id=11 setting co-author=""andrew rosenberg"" and year=2007",UPDATE,article,"{'co_author': 'Andrew Rosenberg', 'year': '2007'}",{'id': '11'},3,ORIGINAL
+UPDATE,article,{'setting': 'co-author='andrew rosenberg'},{'id': 'id'},,52ee858f-aebf-473e-b7c2-f4c2dbbbf766,"update the article with id=11 setting co-author=""andrew rosenberg""",UPDATE,article,{'co-author': 'ANDREW ROSENBERG'},{'id': '11'},2,ORIGINAL
+UPDATE,article,{'coauthor': 'andrew rosenberg'},{'id': 'id'},,824be3c8-ab49-4f29-88dd-65904bb9cddf,"update the article with id=11, setting coauthor=""andrew rosenberg""",UPDATE,article,{'coauthor': 'ANDREW ROSENBERG'},{'id': '11'},2,ORIGINAL
+UPDATE,article,"{'author': 'author', 'article': 'hirschberg'}",{},,81d9d3b0-6315-4d7c-91ac-a42b51d5e44b,"update the article with author=""julia hirschberg"", setting the year=2007",UPDATE,article,{'year': '2007'},{'author': 'JULIA HIRSCHBERG'},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,d4f4a33e-1f04-43e2-b25b-927388c47d24,"update the article with id=11, setting the year=2007",UPDATE,article,{'year': '2007'},{'id': '11'},2,ORIGINAL
+DELETE,article,{'author': 'author'},{},,8ffa2ebd-836c-42c4-a062-1ab030c03975,"delete all articles where author=""julia hirschberg""",DELETE,article,{},{'author': 'JULIA HIRSCHBERG'},1,ORIGINAL
+ADD,pokemon,"{'name': 'name', 'squid': 'name'}",{},,84fa90e7-e85e-4844-ba65-648cb583e1ad,add a pokemon with name='squid',ADD,pokemon,{'name': 'Squid'},{},1,ORIGINAL
+READ,pokemon,{},{},,5ae0c7fa-fa8b-4552-b612-9493b5015763,get all pokemons,READ,pokemon,{},{},0,ORIGINAL
+READ,i,"{'student': 'student', 'name': 'name'}",{},,995ebeca-e3b5-48ab-b32f-5452e87f3098,get student with name=itamar,READ,student,{},{'name': 'Itamar'},1,ORIGINAL
+READ,st_,{'students': 'students'},{},,232ec869-815d-4bb9-a1b5-be3e16b635f0,list all students,READ,student,{},{},0,ORIGINAL
+ADD,a_domesticated_movie_experiment,"{'title': 'title', ''': 'dome'}",{},,6031fc0a-c33c-40a6-8685-25cbd4429fca,add an article with title='dome: a domesticated movie experiment',ADD,article,{'title': 'DoME: A Domesticated Movie Experiment'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,ce892e5a-ebb9-4023-beac-d168bad321d0,"update the article with id=1, setting the year=3021",UPDATE,article,{'year': '3021'},{'id': '1'},2,ORIGINAL
+READ,e_model,{'model': 'model'},{},,d032a982-2afa-44d3-a4f9-18c2c9c64689,show the model,READ,model,{},{},0,ORIGINAL
+UPDATE,Articles,{'author': 'author'},{'articles': 'year'},,bfe53876-e479-455e-bf7f-ca365bf57f4f,"update all articles with year=3021, setting the author='bill gates'",UPDATE,article,{'author': 'Bill Gates'},{'year': '3021'},2,ORIGINAL
+READ,article,{'year': 'year'},{},,496f3319-b47e-4f1d-aaae-1ee11f56dc33,get articles when year=3021,READ,article,{},{'year': '3021'},1,ORIGINAL
+ADD,edward_gates,"{'student': 'student', 'name': 'name', 'gates': 'name'}",{},,785dd278-4876-498b-8ba5-d376ce39c7b4,add student with name='bill' and lastname='gates',ADD,student,"{'name': 'Bill', 'lastname': 'Gates'}",{},2,ORIGINAL
+ADD,publisher,"{'title': 'title', 'publisher': 'dome'}",{},,e83d50eb-f57b-43b2-a7b8-cb1d97fa7f14,"add article with title=""dome: day of my enlightenment"" and publisher=""the matrix""",ADD,article,"{'title': 'DoME: Day of My Enlightenment', 'publisher': 'The Matrix'}",{},2,ORIGINAL
+ADD,e_book,"{'title': 'title', ''': 'dome'}",{},,470afe81-47f7-4179-b905-3a07bd79b5ab,add an article with title='dome: day of my enlightenment' and publisher='the matrix',ADD,article,"{'title': 'DoME: Day of My Enlightenment', 'publisher': 'The Matrix'}",{},2,ORIGINAL
+ADD,e_book,"{'title': 'title', ''': 'dome'}",{},,d5587e36-fc53-4da2-92e4-7a1cb8b80b8a,add an article with title='dome: day of my enlightenment',ADD,article,{'title': 'DoME: Day of My Enlightenment'},{},1,ORIGINAL
+UPDATE,article,"{'publisher': 'publisher', 'matrix': 'publisher'}",{'id': 'id'},,1a496918-a92d-42b6-9fca-21c2fde62685,"update article with id=2, setting publisher='the matrix'",UPDATE,article,{'publisher': 'The Matrix'},{'id': '2'},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,cb8c353c-a954-4f3e-941d-484dbda63bf1,"update article with id=2, setting year=2222",UPDATE,article,{'year': '2222'},{'id': '2'},2,ORIGINAL
+UPDATE,id_2,{'circulation': 'circulation'},{'id': 'id'},,9c60f7cd-1406-4e77-b8bf-aad26bb7c91b,"update article with id=2, setting circulation=10000",UPDATE,article,{'circulation': '10000'},{'id': '2'},2,ORIGINAL
+ADD,daniel_burns,"{'student': 'student', 'name': 'name'}",{},,ddf566cb-297e-4bb6-bc4d-2296c36455f1,add student with name='daniel' and lastname='burns',ADD,student,"{'name': 'Daniel', 'lastname': 'Burns'}",{},2,ORIGINAL
+ADD,streaming_services,{''': 'goblin'},{},,1f3f9332-1f0a-47f2-a0e2-4542aca64a5e,"add goblin with title='streaming services' and text='netflix, amazon prime, disney+, star+'",ADD,goblin,"{'title': 'Streaming services', 'text': 'Netflix, Amazon Prime, Disney+, Star+'}",{},2,ORIGINAL
+READ,goblins,{},{},,e3a813e8-01e5-4c2d-9fbe-40a5f9029dac,list my goblins,READ,goblins,{},{},0,ORIGINAL
+READ,goblins,{},{},,d1abd5fa-7315-4ba8-96d0-3d3ae768eab0,get goblins,READ,goblins,{},{},0,ORIGINAL
+READ,Streamings,{},{},,41c48b8a-a8b5-4842-82a0-763615b18ea7,get streamings,READ,streaming,{},{},0,ORIGINAL
+ADD,klingon,{'klingon': 'klingon'},{},,a20c4bc1-379d-42ac-8f84-31d9c7deb776,add klingon with name='gowron',ADD,klingon,{'name': 'gowron'},{},1,ORIGINAL
+DELETE,klingons,{},{},,1d982e97-de26-4495-9c99-73371f409260,kill all klingons,DELETE,klingon,{},{},0,ORIGINAL
+ADD,Engine,"{'equipment': 'engine', 'sector': 'sector', 'generators': 'generators'}",{},,90601715-6be9-4eb4-aa2b-41f547d8fd51,add equipment with name = 'engine' and sector = 'generators',ADD,equipment,"{'name': 'Engine', 'sector': 'Generators'}",{},2,ORIGINAL
+ADD,metal_shaping,"{'name': 'name', 'furnace': 'name', 'sector': 'name', 'metal': 'metal', 'shaping': 'metal', 'manager': 'manager'}",{},,989f352f-c7d0-4dbe-b45e-5aa22961a92e,"add equipment with name = 'furnace', sector = 'metal shaping' and manager = 'anderson smith'",ADD,equipment,"{'name': 'Furnace', 'sector': 'Metal shaping', 'manager': 'Anderson Smith'}",{},3,ORIGINAL
+READ,tv,{'equipment': 'equipment'},{},,e441c4b9-f766-4fe2-b28e-c797f6c818f7,list equipment,READ,equipment,{},{},0,ORIGINAL
+,,None,None,,58471a2f-6125-4062-a4e5-61d6ce95809a,"list equipment, filtering by name starting with 'en'",READ,equipment,{},{'name': 'En'},1,ORIGINAL
+UPDATE,jane_cooper,{},None,,0a87a5a3-3951-4492-994e-851bd7d61d7d,"for the equipment with name = 'furnace', change manager to 'jane cooper'",UPDATE,equipment,{'manager': 'Jane Cooper'},{'name': 'Furnace'},2,ORIGINAL
+DELETE,equipment,"{'sector': 'sector', 'generators': 'sector'}",{},,3e3d3495-eae1-48bd-8b62-5aa132fe8af7,please delete equipment whose sector is 'generators',DELETE,equipment,{},{'sector': 'Generators'},1,ORIGINAL
+ADD,chuck,"{'person': 'person', 'name': 'name'}",{},,19855eea-1dd1-4087-b40e-3ff442298ebb,add person with name='chuck',ADD,person,{'name': 'chuck'},{},1,ORIGINAL
+READ,person,{},{},,26cb6742-c4b8-423d-850e-7528244e2cb8,get all persons,READ,person,{},{},0,ORIGINAL
+READ,chuck,"{'person': 'person', 'name': 'name'}",{},,7f25405e-99fe-4cf7-921d-25cb562655d7,get all person with name chuck,READ,person,{},{'name': 'chuck'},1,ORIGINAL
+ADD,Quantum_machine_learning,{''': 'quantum'},{},,b35fdaae-de52-4df7-a7b3-675a104b689d,add an article with title='quantum machine learning',ADD,article,{'title': 'Quantum Machine Learning'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,dd9d79d9-000e-403a-a389-b6f7256edc75,"update the article with id=1, setting the year=2021.",UPDATE,article,{'year': '2021'},{'id': '1'},2,ORIGINAL
+DELETE,article,{'year': 'year'},{},,e2bce392-c542-4f37-8d49-1cefd6aff047,delete all articles with year=2021.,DELETE,article,{},{'year': '2021'},1,ORIGINAL
+ADD,show,{'name': 'name'},{},,98f1f9a5-8503-465f-8fbc-b673cf1f67b2,add show with name=paul di'anno,ADD,show,{'name': 'Paul Di'Anno'},{},1,ORIGINAL
+READ,a,{'results': 'result'},{},,ec682a92-8c07-4838-99e1-9885f5135408,show me the results,READ,results,{},{},0,ORIGINAL
+READ,tv,{'shows': 'shows'},{},,d1f3649f-46d7-422a-8f2d-6e45cb90aa0a,get all shows_,READ,show,{},{},0,ORIGINAL
+READ,adobe,{'show': 'show'},{},,cc6bcd54-b6dc-4c14-9b71-3a5ddd4d06b3,get the show_,READ,show,{},{},0,ORIGINAL
+READ,tv,{'shows': 'shows'},{},,debbbfb3-c2e9-4d27-9b10-23f08d71cf63,show me all shows_,READ,show,{},{},0,ORIGINAL
+READ,a,{'show': 'show'},{},,87048eac-c278-4254-adfc-10dc1584e79e,show me all show_,READ,show,{},{},0,ORIGINAL
+READ,tv,{'shows': 'shows_'},{},,2ab938bf-7984-4395-a03a-cb43ec6c34b7,show me the shows_,READ,show,{},{},0,ORIGINAL
+DELETE,tv,"{'show': 'show', 'shows': 'show'}",{},,bb06f0dd-b8c1-4dec-b430-ca4b0282983d,show shows_,READ,show,{},{},0,ORIGINAL
+READ,e_mail,{'students': 'students'},{},,019f0059-93ea-4a1e-94df-ebe0f643e919,show students or whatever,READ,student,{},{},0,ORIGINAL
+ADD,joo_daniel,{'student': 'student'},{},,272e3f4c-d025-4ff3-ba58-cec479010cbc,add student joão daniel,ADD,student,{'name': 'João Daniel'},{},1,ORIGINAL
+READ,tv,{'shows': 'shows'},{},,d6891992-0075-4c8e-8dad-a87776d3cf4b,show me all shows,READ,show,{},{},0,ORIGINAL
+ADD,estrutura_de_dados,"{'class': 'class', 'name': 'name', 'estrutura': 'name', 'dados': 'dados'}",{},,109dd88c-d0de-46a4-ab8f-3e6fda3132e0,add class with name=“estrutura de dados”,ADD,class,{'name': 'estrutura de dados'},{},1,ORIGINAL
+ADD,joo_daniel,"{'student': 'student', 'name': 'name'}",{},,c66f5bd7-bba0-4457-8b84-b70008f9b102,add student with name joão daniel,ADD,student,{'name': 'João Daniel'},{},1,ORIGINAL
+ADD,estructura_de_dados,"{'class': 'class', 'name': 'name', 'estrutura': 'name', 'dados': 'dados'}",{},,c3e8d03d-1be9-4cc9-9a37-7d80270a4daa,add class with name=‘estrutura de dados’,ADD,class,{'name': 'estrutura de dados'},{},1,ORIGINAL
+ADD,estrutura_de_dados,"{'class': 'class', 'name': 'name', 'estrutura': 'name', 'dados': 'dados'}",{},,03c5171a-6300-466c-9c1d-ec729c295388,add class with name=estrutura de dados,ADD,class,{'name': 'estrutura de dados'},{},1,ORIGINAL
+ADD,joo_daniel,"{'student': 'student', 'name': 'name'}",{},,81fcee3c-67d0-430c-a43d-1fdaf7079703,"add student with name = ""joão daniel""",ADD,student,{'name': 'João Daniel'},{},1,ORIGINAL
+ADD,joo_daniel,"{'student': 'student', 'name': 'name'}",{},,abdf9c6f-368f-4288-b21e-8dbb263d7383,add student with name = 'joão daniel',ADD,student,{'name': 'João Daniel'},{},1,ORIGINAL
+ADD,joao_daniel,"{'student': 'student', 'name': 'name'}",{},,fe223b21-f430-4981-8fbd-f05e2f82e80e,add student with name = 'joao daniel',ADD,student,{'name': 'Joao Daniel'},{},1,ORIGINAL
+ADD,dados,"{'student': 'student', 'name': 'name', 'estrutura': 'name'}",{},,4689d8be-c123-42db-bac8-a7040612cce9,add student with name=‘estrutura de dados’,ADD,student,{'name': 'estrutura de dados'},{},1,ORIGINAL
+READ,Plese,{'students': 'plese'},{},,e384d83e-3097-46c5-a8f5-3dcb10d7d969,"plese, show students",READ,student,{},{},0,ORIGINAL
+READ,e_mail,{'students': 'students'},{},,e46f7078-4cdc-4e93-8a2a-49363a9180d6,would you please show students,READ,student,{},{},0,ORIGINAL
+READ,edmund,{'students': 'students'},{},,5f871939-5046-4734-90e9-94d5246763df,would you please show me students,READ,student,{},{},0,ORIGINAL
+READ,st_,{'students': 'you have'},{},,fd41dd4c-38e8-438f-885b-0cb862ac612c,would you please show me all students you have,READ,student,{},{},0,ORIGINAL
+DELETE,show,{'name': 'name'},{},,d4015107-79cd-45b3-98d3-8b85549ca355,delete a show with name=paul dianno,DELETE,show,{},{'name': 'Paul DiAnno'},1,ORIGINAL
+ADD,alumnus,"{'student': 'student', 'name': 'name'}",{},,020e7f50-e205-4052-8873-1de03e8c21d8,include student with name=alinson,ADD,student,{'name': 'Alinson'},{},1,ORIGINAL
+READ,show_me_shows,{'shows': 'shows'},{},,e4bf8c98-5074-4a11-a6d9-ff26f95f6ba9,show me shows,READ,show,{},{},0,ORIGINAL
+ADD,show,"{'name': 'name', 'show': 'anno'}",{},,1e0ffe68-745c-4e01-9168-9f5564533e82,add a show with name = paul di'anno and date = 01/27/2023,ADD,show,"{'name': 'Paul Di'Anno', 'date': '01/27/2023'}",{},2,ORIGINAL
+UPDATE,article,"{'email': 'email', '_': ''}",{'id': 'id'},,c4870bfe-1275-4f3c-9fe2-fd585f9582c5,"update the article with id=4, setting the email=alinson.donato@gmail.com",UPDATE,article,{'email': 'alinson.donato@gmail.com'},{'id': '4'},2,ORIGINAL
+READ,id,{'student': 'student'},{},,bf33029a-04df-444a-b296-c7d739f87df9,get student with id=4,READ,student,{},{'id': '4'},1,ORIGINAL
+ADD,renegados,"{'show': 'show', 'name': 'name', 'date': 'date', 'place': 'place'}",{},,9d3838a1-726b-4468-8e1f-d200697e2644,"add show with name = renegados, and date = 01/28/2023 and place = centro cultural bnb",ADD,show,"{'name': 'Renegados', 'date': '01/28/2023', 'place': 'Centro Cultural BNB'}",{},3,ORIGINAL
+READ,e_mail,"{'student': 'student', 'email': 'email', '_': ''}",{},,9046bdeb-cbac-43f6-91e5-59c06ea77cb1,get student with email=alinson.donato@gmail.com,READ,student,{},{'email': 'alinson.donato@gmail.com'},1,ORIGINAL
+UPDATE,e_mail,"{'student': 'student', 'id': 'id'}","{'email': 'email', '_': ''}",,f2db55f7-e6d0-47ca-bd21-24a7945af45e,"update the student with id=4, setting the email=alinson.donato@gmail.com",UPDATE,student,{'email': 'alinson.donato@gmail.com'},{'id': '4'},2,ORIGINAL
+ADD,metallica,"{'show': 'name', 'metallica': 'metallica'}",{},,2e3dda7d-ad60-4eeb-b908-29f790e2299a,"add show with name = metallica, and date = 02/30/2023 and place = castelao",ADD,show,"{'name': 'Metallica', 'date': '02/30/2023', 'place': 'Castelao'}",{},3,ORIGINAL
+ADD,adolescent,"{'student': 'student', 'name': 'name', 'donato': 'name'}",{},,e552c43a-53f3-4eec-8a17-cc9b3061a1ce,add student with name=donato,ADD,student,{'name': 'Donato'},{},1,ORIGINAL
+ADD,e_mail,"{'student': 'student', 'name': 'name', 'donato': 'name', 'email': 'name', '_': ''}",{},,d09c5afe-fdf7-4422-bcc1-b3bdeadacaa2,"add student with name=donato, email=alinson.donato@prf.gov.br",ADD,student,"{'name': 'Donato', 'email': 'alinson.donato@prf.gov.br'}",{},2,ORIGINAL
+DELETE,student,"{'email': 'email', '_': ''}",{},,0599d521-afd2-4ed8-ab42-ff833f9c9f29,delete the student with email=alinson.donato@prf.gov.br,DELETE,student,{},{'email': 'alinson.donato@prf.gov.br'},1,ORIGINAL
+UPDATE,alanson_donato,{},None,,a1c65e52-e321-43cb-9b25-79e9dc7b1d7a,update the student with name=alinson with name=alinson donato,UPDATE,student,{'name': 'Alinson Donato'},{'name': 'Alinson'},2,ORIGINAL
+ADD,table_students,"{'student': 'student', 'students': 'students'}",{},,a9571b97-eb57-49a1-9838-71a40f3750ad,"create student with name="" or 1=1); drop table students; --""",ADD,student,"{'name': 'or 1=1)', 'table': 'STUDENTS'}",{},2,ORIGINAL
+UPDATE,metallica,"{'show': 'show', 'name': 'name', 'metallica': 'metallica'}",{},,14e03f9f-8664-40a0-a887-90dc62cb7090,"update a show with name metallica, replace date with 10/22/2024",UPDATE,show,{'date': '10/22/2024'},{'name': 'metallica'},2,ORIGINAL
+READ,tv,{'shows': 'shows'},{},,060859c4-fd11-4725-936d-1ecd4f1529d6,get all shows,READ,show,{},{},0,ORIGINAL
+ADD,table_students,"{'student': 'student', 'students': 'students'}",{},,ba6207cf-0f6b-453b-ad6e-6baac5e6c702,"create student with name="" or 1=1}; drop table students; --""",ADD,student,"{'name': '1=1', 'table': 'STUDENTS'}",{},2,ORIGINAL
+ADD,table_students,"{'student': 'student', 'students': 'students'}",{},,9252ef72-a362-43af-9237-22d64490eab3,"create student with name=""' or 1=1; drop table students; --""",ADD,student,"{'name': '1=1', 'table': 'STUDENTS'}",{},2,ORIGINAL
+ADD,table_student,{'student': 'student'},{},,0dd80456-12c1-4fea-8c64-962f89f9811e,"create student with name=""' or 1=1; drop table student; --""",ADD,student,"{'name': '1=1', 'table': 'STUDENT'}",{},2,ORIGINAL
+ADD,experimental_framework,"{'simulation': 'simulation', 'benchmark': 'simulation'}",{},,9878773a-22ab-4119-8cd9-f32beca2b9a6,"add an article with title='experimental framework, simulation, benchmark'",ADD,article,"{'title': 'Experimental framework, Simulation, Benchmark'}",{},1,ORIGINAL
+ADD,table_students,"{'student': 'student', 'students': 'students'}",{},,4c1669cf-52b0-4936-b1d1-6a033a79e97d,create student with name=' or 1=1; drop table students; --',ADD,student,"{'name': '1=1', 'table': 'STUDENTS'}",{},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,f8e1f986-946b-4364-8d6b-aa14bdf97033,"update the article with id=1, setting the
+year=2020",UPDATE,article,{'year': '2020'},{'id': '1'},2,ORIGINAL
+UPDATE,article,"{'author': 'author', 'article': 'ze'}",{'id': 'id'},,18fc8821-6d94-45ff-88c0-5e008a873b66,"update the article with id=2, setting the
+author='zé das couves'",UPDATE,article,{'author': 'Zé das Couves'},{'id': '2'},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,34010a34-8c70-420b-b6c3-473dc0e49fb2,"update the article with id=3, setting the
+year=2020",UPDATE,article,{'year': '2020'},{'id': '3'},2,ORIGINAL
+ADD,table_students,"{'student': 'student', 'students': 'students'}",{},,61aa6bb4-3e6e-4413-b56d-a71111b8fe30,"create student with name=""robert'); drop table students; --""",ADD,student,"{'name': 'Robert', 'table': 'STUDENTS'}",{},2,ORIGINAL
+ADD,table_students,"{'student': 'student', 'students': 'students'}",{},,a2822fb0-f38e-4557-8300-86b732ff4669,"create student with name=""robert' and 1=1); drop table students; --""",ADD,student,"{'name': 'Robert', 'table': 'STUDENTS'}",{},2,ORIGINAL
+ADD,drop_table_students,"{'student': 'student', 'students': 'students'}",{},,1e9296dd-84ea-4cea-9efa-7a4c44e56e2b,"create student with email=""alinson.donato@gmail.com' and 1=1); drop table students; --""",ADD,student,"{'email': 'alinson.donato@gmail.com', 'table': 'STUDENTS'}",{},2,ORIGINAL
+ADD,managedsys_web,"{'student': 'student', '_': '', 'managedsys_web': 'com'}",{},,c7ff6ff2-e622-4e67-822c-47946105171d,"create student with email=""alinson.donato@gmail.com' and 1=1); drop database managedsys_web; --""",ADD,student,"{'email': 'alinson.donato@gmail.com', 'database': 'MANAGEDSYS_WEB'}",{},2,ORIGINAL
+ADD,e_mail,"{'student': 'student', 'email': 'email', '_': ''}",{},,70a62210-4c21-4a37-b37c-2410172c0a41,create student with email=amg@gmail.com,ADD,student,{'email': 'amg@gmail.com'},{},1,ORIGINAL
+,,None,None,,3b9fc4b0-249b-497f-abc1-e61ec6f54cc5,show tables,READ,tables,{},{},0,ORIGINAL
+ADD,sku,{'name': 'name'},{},,8f8bdfec-dfda-4204-9ae8-1c616c3743e8,add sku with name='john doe',ADD,sku,{'name': 'John Doe'},{},1,ORIGINAL
+DELETE,sku,{'show': 'show'},{},,b3844709-3a02-40f7-b60d-c6be179c3a58,show skus,READ,sku,{},{},0,ORIGINAL
+ADD,forest,"{'elf': 'elf', 'name': 'name', 'forest': 'galadriel'}",{},,adb45c9b-af76-472b-8c7e-7daffdad05cb,add elf with name='galadriel' and type='forest',ADD,elf,"{'name': 'Galadriel', 'type': 'Forest'}",{},2,ORIGINAL
+ADD,elf,"{'name': 'name', 'elf': 'galadriel'}",{},,738ef521-412a-44b9-a284-1c89569a86e7,"add elf with name='galadriel', type='forest', age='1247', ringtype='water' and power='perception'",ADD,elf,"{'name': 'Galadriel', 'type': 'Forest', 'age': '1247', 'ringtype': 'Water', 'power': 'Perception'}",{},5,ORIGINAL
+ADD,elf,"{'name': 'name', 'elf': 'galadriel'}",{},,2d6a1fff-f749-479b-aff3-9b7c1df32be8,"add elf with name='galadriel', type='forest', age='1247', ringtype='water', power='perception'",ADD,elf,"{'name': 'Galadriel', 'type': 'Forest', 'age': '1247', 'ringtype': 'Water', 'power': 'Perception'}",{},5,ORIGINAL
+ADD,elf,"{'name': 'name', 'elf': 'galadriel'}",{},,0fc07202-ebbc-498c-bbf9-6cfb87be61fc,"add elf with name='galadriel', type='forest', age='1247', power='perception'",ADD,elf,"{'name': 'Galadriel', 'type': 'Forest', 'age': '1247', 'power': 'Perception'}",{},4,ORIGINAL
+ADD,elf,"{'name': 'name', 'elf': 'galadriel'}",{},,58caff71-8d85-476b-b0aa-b43500c76451,"add elf with name='galadriel', type='forest', age='1247', ring type='water' and power='perception'",ADD,elf,"{'name': 'Galadriel', 'type': 'Forest', 'age': '1247', 'ring': 'type='Water' and power='Perception'}",{},4,ORIGINAL
+ADD,elf,"{'name': 'name', 'galadriel': 'name', 'type': 'type', 'water': 'name', 'power': 'name', 'perception': 'perception'}",{},,65a179bf-0449-456e-89d6-3f644ffe189c,"add elf with name=galadriel, type=forest, age=1247, ringtype=water and power=perception",ADD,elf,"{'name': 'Galadriel', 'type': 'Forest', 'age': '1247', 'ringtype': 'Water', 'power': 'Perception'}",{},5,ORIGINAL
+READ,eliakim,"{'student': 'student', 'name': 'name'}",{},,6d915ba6-5e66-4e15-a277-5827999fc977,get student with name=eliakim',READ,student,{},{'name': 'Eliakim'},1,ORIGINAL
+ADD,anderson,"{'student': 'student', 'name': 'name'}",{},,bd257e4b-dc5c-436b-ba3b-fcad1fedc1ae,include student with name=anderson,ADD,student,{'name': 'Anderson'},{},1,ORIGINAL
+ADD,eliakim,"{'student': 'student', 'name': 'name'}",{},,c80be201-c943-41f7-81e7-163502890d6e,include student with name=eliakim,ADD,student,{'name': 'Eliakim'},{},1,ORIGINAL
+READ,academies,{'students': 'students'},{},,293bb5c1-5f44-46a2-abc2-1d3b42150dc9,list students,READ,student,{},{},0,ORIGINAL
+ADD,ci_ncias_biol_gicas,{'title': 'análise sobre a ausência de aula prática no'},{},,0e596fe2-5d6e-4b68-8401-3c1d739a9d14,add an article with title = 'análise sobre a ausência de aula prática no ensino da disciplina de ciências biológicas',ADD,article,{'title': 'análise sobre a ausência de aula prática no ensino da disciplina de ciências biológicas'},{},1,ORIGINAL
+ADD,vanilla,"{'ice': 'ice', 'cream': 'ice', 'flavour': 'ice'}",{},,b33521d7-a625-48b3-85c6-714355d24527,add a ice cream with flavour=vanilla,ADD,ice_cream,{'flavour': 'vanilla'},{},1,ORIGINAL
+ADD,crop__linking_code_reviews_to_source_code_changes,"{'article': 'title', 'crop': 'article', 'code': 'code', 'changes': 'changes'}",{},,a0a08aa7-2b3d-468a-bf0a-2d183c9a9ec7,add an article with title = 'crop: linking code reviews to source code changes',ADD,article,{'title': 'CROP: Linking Code Reviews to Source Code Changes'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,783878a2-bcfb-484c-90e3-1739844019c3,"update the article with id=4, setting the year=2018",UPDATE,article,{'year': '2018'},{'id': '4'},2,ORIGINAL
+DELETE,article,{'year': 'year'},{},,ec1d885d-2fa2-4c89-a914-722792108264,delete all articles with year=2018.,DELETE,article,{},{'year': '2018'},1,ORIGINAL
+ADD,iot_defiant_components,{''': 'defiant'},{},,889ef6a8-e40a-46b9-a922-3fb5ea403b08,add an article with title = 'dealing with iot defiant components',ADD,article,{'title': 'Dealing with IoT Defiant Components'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,cd272372-507c-4d66-92df-e02f32c10aff,"update the article with id=1, setting the year=2020",UPDATE,article,{'year': '2020'},{'id': '1'},2,ORIGINAL
+UPDATE,article,{'author': 'author'},{'id': 'id'},,96611502-55f8-4a05-bcc0-d02b4b983a4d,"update the article with id=5, setting the author='adrilene fonseca'",UPDATE,article,{'author': 'Adrilene Fonseca'},{'id': '5'},2,ORIGINAL
+DELETE,article,"{'author': 'author', 'couves': 'author'}",{},,4be7f57a-bad2-4309-ae1c-6363330736c5,delete all articles with author=zé das couves,DELETE,article,{},{'author': 'Zé das Couves'},1,ORIGINAL
+ADD,software,"{'intents': 'intents', 'refactoring': 'refactoring', 'modern_code': 'modern code', 'review': 'review'}",{},,438811d4-976d-4bc7-a877-a8a0d5cf7c40,add an article with title='behind the intents: an in-depth empirical study on software refactoring in modern code review',ADD,article,{'title': 'Behind the intents: An in-depth empirical study on software refactoring in modern'},{},1,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,d32be244-076a-4432-8f64-6358d982f28f,"update the article with id=6, setting the
+year=2020",UPDATE,article,{'year': '2020'},{'id': '6'},2,ORIGINAL
+ADD,e_mail,"{'student': 'student', 'name': 'name', 'br': 'freitas'}",{},,802bc93d-aba6-4cc5-81f9-d3ec65f26a58,"include student with name=matheus freitas, email=fernandes.matheus@aluno.uece.br",ADD,student,"{'name': 'Matheus Freitas', 'email': 'fernandes.matheus@aluno.uece.b'}",{},2,ORIGINAL
+READ,st,{'student': 'student'},{},,69c3c9e4-2fc9-4667-bea7-11c81c64a3fb,show me all student,READ,student,{},{},0,ORIGINAL
+ADD,api_gateway,"{'gateway': 'gateway', 'author': 'author'}",{},,6e0b4b9a-50ae-47aa-a023-39a32731732e,"add an article with title=building microservices: using an api gateway, author=chris richardson",ADD,article,"{'title': 'Building Microservices: Using an API Gateway', 'author': 'Chris Richardson'}",{},2,ORIGINAL
+ADD,microservices,"{'title': 'title', 'introduction': 'introduction', 'microservices': 'microservices'}",{},,e60207e1-3225-4544-aa80-8e703027770e,"add an article with title=introduction to microservices, author=chris richardson",ADD,article,"{'title': 'Introduction to MIcroservices', 'author': 'Chris Richardson'}",{},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,1a258001-d6ef-4deb-b613-b9ebb56b0ff4,"update the article with id=7, setting the year=2018",UPDATE,article,{'year': '2018'},{'id': '7'},2,ORIGINAL
+ADD,data_structures,"{'name': 'name', 'data': 'name', 'structures': 'name', 'professor': 'name'}",{},,03ca2143-a5c2-4a93-b988-d7959491a9ef,"add a subject with name=""data structures"" and professor=""ana luiza""",ADD,subject,"{'name': 'Data Structures', 'professor': 'Ana Luiza'}",{},2,ORIGINAL
+ADD,data_structures,"{'name': 'name', 'data': 'name', 'structures': 'name'}",{},,91dd3e1c-ff44-4060-9cc6-f64975c4340c,"add a subject with name=""data structures"" and professor=""josé negreiros""",ADD,subject,"{'name': 'Data Structures', 'professor': 'José Negreiros'}",{},2,ORIGINAL
+READ,a,{},{},,d8f2cba8-a614-4a6b-9f66-7b92bae503ac,get subject,READ,subject,{},{},0,ORIGINAL
+ADD,linear_algebra,"{'name': 'name', ''': 'algebra'}",{},,d9c46d43-42ff-4fa9-9d23-a5503755d6f3,"add a subject with name ""linear algebra"" and professor=""thelmo pontes""",ADD,subject,"{'name': 'Linear Algebra', 'professor': 'Telmo Pontes'}",{},2,ORIGINAL
+UPDATE,linear_algebra,{'professor': 'professor'},{'subject': 'name'},,ddd417be-6a10-4710-9d97-bd59dfdd28ab,"update the subject with name=""linear algebra"", setting professor=""thelmo pontes""",UPDATE,subject,{'professor': 'Thelmo Pontes'},{'name': 'Linear Algebra'},2,ORIGINAL
+UPDATE,thelmo_pontes,{'professor': 'professor'},{'subject': 'id'},,9ffe1410-fff6-4e6d-9ef4-b8baf92806ae,"update the subject with id=3, setting professor=""thelmo pontes""",UPDATE,subject,{'professor': 'Thelmo Pontes'},{'id': '3'},2,ORIGINAL
+UPDATE,data_structures,{},None,,1969eb78-b03d-4100-86d6-506957c37a70,"update the subject where name=""data structures"", setting semester=""2023.1""",UPDATE,subject,{'name': 'Data Structures'},{'semester': '2023.1'},2,ORIGINAL
+READ,a,{'subjects': 'subject'},{},,1b5725ea-ca02-440d-9c0a-8d3f49fc8cb1,get subjects,READ,subject,{},{},0,ORIGINAL
+UPDATE,2023_1,"{'structures': 'data', 'semester': 'semester'}",{'subject': 'name'},,36c65a76-2751-41ea-beeb-ca68f7327ab8,"update the subject with name=""data structures"", setting semester=""2023.1""",UPDATE,subject,{'semester': '2023.1'},{'name': 'Data Structures'},2,ORIGINAL
+UPDATE,data_structures,{},None,,c7160f4a-6d4d-420d-817b-2027ca046639,"update the subject where name=""data structures"", settingthe semester=""2023.1""",UPDATE,subject,{},{},0,ORIGINAL
+UPDATE,data_structures,{},None,,8b0a40c9-2183-46d3-bfb6-e90cd9a65d81,"update the subject where name=""data structures"", setting the semester=""2023.1""",UPDATE,subject,{'semester': '2023.1'},{'name': 'Data Structures'},2,ORIGINAL
+UPDATE,2023_1,{},None,,d8f9144a-8cad-4a9f-8975-755bf00fe7eb,"update the subject where semester=""2023.1"", setting name=""data structures""",UPDATE,subject,{'name': 'Data Structures'},{'semester': '2023.1'},2,ORIGINAL
+ADD,Brazilian_history,{'name': 'name'},{},,cbf17a1b-92ab-4852-82bf-5f83b21c60d1,add a subject with name='brazilian history',ADD,subject,{'name': 'Brazilian History'},{},1,ORIGINAL
+READ,a,{},{},,8de40a42-ed64-41b6-a19f-6628dfcd3676,get all subjects,READ,subject,{},{},0,ORIGINAL
+UPDATE,subject,{'main_reference': 'main reference'},{'id': 'id'},,4233e0b7-4eb3-4417-b4d0-683c45d8abb3,"update subject with id=4, setting the main reference to 'brasil, uma história'",UPDATE,subject,"{'main_reference': 'to 'Brasil, uma História'}",{'id': '4'},2,ORIGINAL
+READ,pizza,{},{},,3dec6d17-36f6-4ba0-8d42-83ec995a07a5,get pizzas,READ,pizza,{},{},0,ORIGINAL
+ADD,pizza,"{'flavour': 'flavour', 'pepperoni': 'flavour'}",{},,9d4ff023-2327-403d-93ce-249a9a666ef2,add a pizza with flavour='pepperoni',ADD,pizza,{'flavour': 'pepperoni'},{},1,ORIGINAL
+DELETE,pizza,{'show': 'show'},{},,300b7e24-a852-4600-b130-ac269f4aebc1,show pizzas,READ,pizza,{},{},0,ORIGINAL
+DELETE,ice_creams,"{'show': 'show', 'ice': 'show', 'creams': 'show'}",{},,ae1269e8-5191-4312-b04f-481017fd771b,show ice creams,READ,ice_cream,{},{},0,ORIGINAL
+READ,ice_cream,"{'ice': 'ice', 'cream': 'ice'}",{},,42159ce3-6471-47ca-86fe-8b7e1e2a063e,show me all ice cream,READ,ice_cream,{},{},0,ORIGINAL
+ADD,sergio,"{'student': 'student', 'name': 'name'}",{},,fde746b6-489d-4bc3-84dc-467d99d067e7,add student with name=sergio,ADD,student,{'name': 'Sergio'},{},1,ORIGINAL
+READ,sergii,{'student': 'where name=sergii'},{},,e549d0b1-e8fe-49bf-92b1-a82d5e8dcd41,show me student where name=sergii,READ,student,{},{'name': 'sergii'},1,ORIGINAL
+READ,sergio,"{'student': 'student', 'name': 'name'}",{},,7d6d603c-9c32-4f79-bae3-163874203be3,show me student where name=sergio,READ,student,{},{'name': 'Sergio'},1,ORIGINAL
+READ,sergio,"{'student': 'student', 'students': 'students'}",{},,9b11871a-cdec-4055-a260-317018734fbe,show me student where name=sergio; drop students,READ,student,{},{'name': 'Sergio'},1,ORIGINAL
+READ,sergio,"{'student': 'student', 'students': 'students'}",{},,4c168429-39fd-4240-8a71-9932bf679e45,show me student where name='sergio; drop students',READ,student,{},{'name': 'Sergio'},1,ORIGINAL
+ADD,drop,{'students': 'where name=injection;drop students'},{},,4a23dd55-f169-4296-8354-afb240466197,add students where name=injection;drop students,ADD,student,{'name': 'Injection'},{},1,ORIGINAL
+ADD,injection,{'students': 'students'},{},,78a386e2-e12a-469d-b51d-e07313f29196,add students where name='injection;drop students',ADD,student,{'name': 'Injection;DROP students'},{},1,ORIGINAL
+DELETE,e_mail,{'student': 'name=injection'},{},,c91f4f54-8b0e-4565-96ff-3aa3401136e8,delete student name=injection,DELETE,student,{},{'name': 'Injection'},1,ORIGINAL
+DELETE,injection,{'student': 'name='injection;drop students;'},{},,2ed8552c-4f71-4829-a52f-1d4f93c7f5a8,delete student name='injection;drop students;',DELETE,student,{},{'name': 'Injection'},1,ORIGINAL
+DELETE,injection,{'student': 'name='injection;drop students'},{},,56a4edc6-7954-4644-8f48-e2a62c9ae865,delete student name='injection;drop students',DELETE,student,{},{'name': 'Injection;DROP students'},1,ORIGINAL
+DELETE,__injection,{'student': 'name='--injection;drop students'},{},,f081f9c4-4450-49dd-9657-ca7cd7d175d9,delete student name='--injection;drop students',DELETE,student,{},{'name': '--Injection;DROP students'},1,ORIGINAL
+UPDATE,Article,{'author': 'author'},{'id': 'id'},,8d3b3993-9c85-4cf9-8f69-4a046ac1f41c,"update the article with id=9, setting the author=darcio",UPDATE,article,{'author': 'Darcio'},{'id': '9'},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,4cd81ab5-39ef-42e7-9a53-b524c18d843e,"update the article with id=9, setting the year=darcio",UPDATE,article,{'year': 'Darcio'},{'id': '9'},2,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,8f68cb76-6cfe-4903-a7cd-fd9bd2f26a23,"update the article with id=9, setting the year=2023",UPDATE,article,{'year': '2023'},{'id': '9'},2,ORIGINAL
+UPDATE,article,{'co_author': 'co-author'},{'id': 'id'},,0a3c127b-74dc-4be0-b26a-f7ca66c10392,"update the article with id=9, setting the co-author=souza",UPDATE,article,{'co_author': 'Souza'},{'id': '9'},2,ORIGINAL
+ADD,python,{'title': 'apis modernas e assincronas com'},{},,67914a4e-8333-4d6d-80a7-4749aec22c25,add an article with title = 'apis modernas e assincronas com python',ADD,article,{'title': 'APIs Modernas e Assincronas com Python'},{},1,ORIGINAL
+READ,entity,{},{},,ac440cbd-a205-4897-befc-76cf66053151,get all entities,READ,entities,{},{},0,ORIGINAL
+UPDATE,article,{'year': 'year'},{'id': 'id'},,983ef3d6-35f4-4e6d-b2d0-dd09e3507bf1,"update the article with id=10, setting the year=2023",UPDATE,article,{'year': '2023'},{'id': '10'},2,ORIGINAL
+DELETE,article,{'id': 'id'},{},,d3190e31-a074-49d5-9143-26ab2ad5c3a2,delete all articles with id=8,DELETE,article,{},{'id': '8'},1,ORIGINAL
+UPDATE,article,{'author': 'author'},{'id': 'id'},,ff87fa98-850a-4a3c-aeeb-d25737f8fced,"update the article with id=10, setting the author='odivon'",UPDATE,article,{'author': 'Odivon'},{'id': '10'},2,ORIGINAL
+DELETE,architecture_guide,{'article': 'article'},{},,b2d0db79-8f25-4f64-9c7a-42270a82ed91,can you save a article named “architecture guide”?,ADD,article,{'name': 'architecture guide'},{},1,ORIGINAL
+ADD,article,{},{},,c3d6a204-9e72-4a9e-a2cf-3bd315708674,add article great,ADD,article,{},{},0,ORIGINAL
+ADD,article,"{'description': 'description', 'architecture': 'description', 'guide': 'description'}",{},,594f480c-b7ae-4c92-b5df-272e1288ae5e,add article with description = ‘the architecture guide”,ADD,article,{'description': 'The Architecture Guide”'},{},1,ORIGINAL
+,,None,None,,74471316-b110-4b12-a977-200def77f192,update article id=11 set author=‘leo siebra’,UPDATE,article,{'author':'Leo Siebra'},{'id': '11'},2,ORIGINAL
+,,None,None,,eb22f3ae-690f-4b0f-a8b6-ac427c8eb7e2,update article id=11  author=‘leo siebra’,UPDATE,article,{'author': 'Leo Siebra'},{'id': '11'},2,ORIGINAL
+READ,article,{},{},,004cbc9f-2999-472c-b7ae-26711a51a603,get my articles,READ,article,{},{},0,ORIGINAL
+ADD,book,{'product': 'type=book'},{},,b3ae7464-6c29-42c5-bd7d-59c9a6870f4e,add a product type=book,ADD,product,{'type': 'book'},{},1,ORIGINAL
+READ,get_products,{'products': 'products'},{},,f6e904e7-6ec7-4c58-be21-f8efa7d6618b,get products,READ,product,{},{},0,ORIGINAL
+READ,article,{'id': 'id'},{},,7f0aac01-8392-4c48-8917-36de11519562,show article id=2,READ,article,{},{'id': '2'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,755ab1f9-0d3c-4b87-b7e8-2ef13b6f52ba,show article where id=5,READ,article,{},{'id': '5'},1,ORIGINAL
+READ,article,{'id': 'id'},{},,4f3d175e-a21c-4076-bd13-065d88b86bc3,show article where id=1,READ,article,{},{'id': '1'},1,ORIGINAL
+UPDATE,article,{'author': 'author'},{'id': 'id'},,e8aecc46-968d-4114-b342-a22ba392ec40,"update article with id=11, setting the author=leo siebra",UPDATE,article,{'author': 'Leo Siebra'},{'id': '11'},2,ORIGINAL
+READ,article,{'id': 'id'},{},,d2bf238f-1238-44ce-bb08-d8d719d6d72c,show me the article with id=11,READ,article,{},{'id': '11'},1,ORIGINAL
+ADD,Attention,"{'title': 'title', 'year': 'year', 'author': 'author', ']': 'nogueira'}",{},,03b0d61c-0393-44f2-8ecc-f5b2719732cc,"please add a article with title='attention is all you need', year=2022, author=""alex nogueira"", keywords=['attention']",ADD,article,"{'title': 'Attention is all you need', 'year': '2022', 'author': 'Alex Nogueira', 'keywords': 'Attention'}",{},4,ORIGINAL
+UPDATE,Alpha,{'set': 'status=completed'},{'project': 'project'},,880061cf-90c7-4391-bd35-e4c8fb50d090,"update project Alpha, set status=completed",UPDATE,project,{'status': 'completed'},{'name': 'Alpha'},2,SYNTHETIC
+ADD,article,"{'year': 'year', 'author': 'author', 'article': 'nogueira'}",{},,e190fc10-20b9-4d59-940e-37e3b91ac1c2,"add article with title='attention is all you need', year=2022, author=""alex nogueira"", keywords=['attention']",ADD,article,"{'title': 'Attention is all you need', 'year': '2022', 'author': 'Alex Nogueira', 'keywords': 'Attention'}",{},4,ORIGINAL
+UPDATE,article,{'revision': 'revision'},{'id': 'id'},,11ad1dd9-c201-4ea7-8925-bf5b0272e761,"update article with id=12, setting revision=1",UPDATE,article,{'revision': '1'},{'id': '12'},2,ORIGINAL
+ADD,film,{'title': 'title'},{},,4eac4aea-6222-497e-ace2-2e5c32bdc81e,add a movie with title='batman begins',ADD,film,{'title': 'Batman Begins'},{},1,ORIGINAL
+ADD,152,{'movie': '152'},{},,edccfeba-b71c-40f1-8306-bdf0e9c2a428,"add a movie with title='the dark knight', ""running time""=152",ADD,film,"{'title': 'The Dark Knight', 'running_time': '152'}",{},2,ORIGINAL
+READ,anderson,"{'students': 'students', 'name': 'name'}",{},,c99a994e-501e-4f88-97dd-e4a0f63c7577,get all students with name='anderson',READ,student,{},{'name': 'Anderson'},1,ORIGINAL
+ADD,a_former_teacher,"{'former_teacher': 'teacher', 'name': 'name', 'onelia': 'name'}",{},,1e15139a-fee0-4759-8aca-4995cdec3fbb,add a former teacher with name='onelia',ADD,former_teacher,{'name': 'Onelia'},{},1,ORIGINAL
+ADD,value_100,{'invoice': '100'},{},,f175d46c-73bc-4710-9490-39f60be80a39,add an invoice with value=100,ADD,invoice,{'value': '100'},{},1,ORIGINAL
+READ,invoice,{},{},,93408197-3601-4d8c-af89-257677ba7d64,get all invoice,READ,invoice,{},{},0,ORIGINAL
+ADD,license,{'car': 'license=2020'},{},,13fd495e-2a51-4b43-874a-29176932a532,add car with license=2020,ADD,car,{'license': '2020'},{},1,ORIGINAL
+ADD,color,{'car': 'color=black'},{},,c0b4ea26-b6cf-488a-99b8-792c021142be,add car with color=black,ADD,car,{'color': 'black'},{},1,ORIGINAL
+READ,car,{},{},,0faeed9e-065d-436d-97b1-233abdd0458a,get all cars,READ,car,{},{},0,ORIGINAL
+ADD,Physics_I,"{'course': 'course', 'name': 'name', 'code': 'code'}",{},,4f74db5b-d1b0-4d38-8d5a-e34a5a2e1990,"add course with name=Physics I, code=PHY101",ADD,course,"{'name': 'Physics I', 'code': 'PHY101'}",{},2,SYNTHETIC
+DELETE,PHY101,"{'course': 'course', 'code': 'code'}",{},,3c7b12a2-1de6-4dfc-b045-fd9cc79d5ae6,delete course with code=PHY101,DELETE,course,{},{'code': 'PHY101'},1,SYNTHETIC
+UPDATE,Applied_Physics,"{'course': 'course', 'set': 'set', 'name': 'name'}",{'code': 'code'},,cd8114f3-9be2-42e7-abef-fdfc9f8a7bb2,"update course with code=PHY101, set name=Applied Physics",UPDATE,course,{'name': 'Applied Physics'},{'code': 'PHY101'},2,SYNTHETIC
+ADD,Jane_Doe,"{'book': 'book', 'title': 'book', 'great_novel': 'book', 'author': 'author'}",{},,090faa9d-29d4-4313-8723-8de90b521697,"add book with title=The Great Novel, author=Jane Doe",ADD,book,"{'title': 'The Great Novel', 'author': 'Jane Doe'}",{},2,SYNTHETIC
+READ,Jane_Doe,{'books': 'books'},{},,e271afa0-8421-4d64-a7cc-ba50005e2f52,get books by Jane Doe,READ,book,{},{'author': 'Jane Doe'},1,SYNTHETIC
+DELETE,title,"{'book': 'book', 'great_novel': 'book'}",{},,828cc3e0-e3e4-4b18-8d20-837af6f2c8b5,delete book with title=The Great Novel,DELETE,book,{},{'title': 'The Great Novel'},1,SYNTHETIC
+UPDATE,book,{},None,,84d0b6b6-6f7e-417d-a466-8295d49b8339,"update book with title=The Great Novel, set publication_year=2023",UPDATE,book,{'publication_year': '2023'},{'title': 'The Great Novel'},2,SYNTHETIC
+ADD,Sales,"{'employee': 'employee', 'name': 'name', 'sales': 'smith'}",{},,d04b9bf3-5ee8-4e2a-bb5a-d6f11697d025,"add employee with name=John Smith, department=Sales",ADD,employee,"{'name': 'John Smith', 'department': 'Sales'}",{},2,SYNTHETIC
+READ,sales,"{'employees': 'employees', 'department': 'department'}",{},,5c85ddd0-0956-4018-92ff-95bb67d110b1,show employees in Sales department,READ,employee,{},{'department': 'Sales'},1,SYNTHETIC
+DELETE,employee,{},{},,a38441d2-5b86-4f3c-8525-9841ab1fe428,delete employee named John Smith,DELETE,employee,{},{'name': 'John Smith'},1,SYNTHETIC
+,,None,None,,5740a7a4-f1cb-4d6d-b2eb-33e8f981ba5c,"update employee John Smith, change department to Marketing",UPDATE,employee,{'department': 'Marketing'},{'name': 'John Smith'},2,SYNTHETIC
+ADD,laptop,{'product': 'price'},{},,be924544-f0ac-4731-a415-2f0a07c601d2,"add product with name=Laptop, price=1200",ADD,product,"{'name': 'Laptop', 'price': '1200'}",{},2,SYNTHETIC
+READ,500,{'products': 'under 500'},{},,6d780737-4e62-46b4-a56f-b82288be4304,get products under 500,READ,product,{},{'price': '<500'},1,SYNTHETIC
+DELETE,laptop,{'product': 'product'},{},,ec590993-fa43-4c90-af75-70d46cc21066,delete product Laptop,DELETE,product,{},{'name': 'Laptop'},1,SYNTHETIC
+UPDATE,laptop,{},None,,23664764-d590-4414-b1d1-612bbfcea298,"update product Laptop, set price=1100",UPDATE,product,{'price': '1100'},{'name': 'Laptop'},2,SYNTHETIC
+ADD,customer,"{'email': 'email', '_': ''}",{},,b0ed3cee-4f6d-475c-bd64-e22b9a550385,add customer with email=test@example.com,ADD,customer,{'email': 'test@example.com'},{},1,SYNTHETIC
+READ,customer,{},{},,43ff312e-99fb-4f7b-8eeb-0fe94cd10360,show customers from USA,READ,customer,{},{'country': 'USA'},1,SYNTHETIC
+DELETE,customer,"{'email': 'email', '_': ''}",{},,03d9917d-b7fa-4e49-8f17-1899ef1552cf,delete customer with email=test@example.com,DELETE,customer,{},{'email': 'test@example.com'},1,SYNTHETIC
+UPDATE,customer,"{'_': '', 'customer': 'com'}",{},,19f17d40-c050-4cdb-8645-d3b84be11508,"update customer test@example.com, set phone=123-456-7890",UPDATE,customer,{'phone': '123-456-7890'},{'email': 'test@example.com'},2,SYNTHETIC
+ADD,item,{'order': 'quantity=10'},{},,ecce9bd5-6144-4fad-8298-e30fa5398da3,"add order with item=Pen, quantity=10",ADD,order,"{'item': 'Pen', 'quantity': '10'}",{},2,SYNTHETIC
+READ,last_week,{'orders': 'from last week'},{},,a6fc4895-99c5-40e8-b940-5d213303e3f0,get orders from last week,READ,order,{},{'date': 'last week'},1,SYNTHETIC
+DELETE,Pen,{'order': 'order'},{},,e5f89363-c590-40ce-948e-f267316f41ff,delete order for Pen,DELETE,order,{},{'item': 'Pen'},1,SYNTHETIC
+UPDATE,Pen,{'order': 'order'},{'quantity': 'quantity'},,d4e46611-1ab5-4cc6-a8a4-475a4805f7b5,"update order for Pen, change quantity to 15",UPDATE,order,{'quantity': '15'},{'item': 'Pen'},2,SYNTHETIC
+ADD,Alpha,{'project': 'status'},{},,fae13ee7-ba51-41cd-9404-cf5898e114d3,"add project with name=Alpha, status=ongoing",ADD,project,"{'name': 'Alpha', 'status': 'ongoing'}",{},2,SYNTHETIC
+,,None,None,,d0b33d57-18af-4798-abd5-f3887da17cb3,show completed projects,READ,project,{},{'status': 'completed'},1,SYNTHETIC
+DELETE,project_Alpha,{'project': 'project'},{},,b97002b6-e50d-42fc-b577-16b803d00268,delete project Alpha,DELETE,project,{},{'name': 'Alpha'},1,SYNTHETIC
+READ,Apple,{'phones': 'apple'},{},,808d7f9e-fb28-4560-aed5-ef45d1b8fea5,show Apple phones,READ,phone,{},{'brand': 'Apple'},1,SYNTHETIC
+ADD,Writing,"{'task': 'deadline', 'tomorrow': 'tomorrow'}",{},,02b145ab-205e-4788-9283-9c286ec62831,"add task with description=Write report, deadline=tomorrow",ADD,task,"{'description': 'Write report', 'deadline': 'tomorrow'}",{},2,SYNTHETIC
+READ,overdue_tasks,{},{},,5bc4b085-7a05-44a0-9402-b42f411aeb6c,get overdue tasks,READ,task,{},{'status': 'overdue'},1,SYNTHETIC
+DELETE,task,{'report': 'report'},{},,ddf39bc8-b1b7-400b-8166-f4f2991fc6a6,delete task Write report,DELETE,task,{},{'description': 'Write report'},1,SYNTHETIC
+UPDATE,task,{'status': 'status'},{'write': 'e report'},,aca67bd0-084b-48be-9a09-d073c60303d1,"update task Write report, set status=done",UPDATE,task,{'status': 'done'},{'description': 'Write report'},2,SYNTHETIC
+ADD,Meeting,"{'name': 'name', 'date': 'date'}",{},,3f5d3a65-3e4c-49c0-be54-6e37a813e34f,"add event with name=Meeting, date=2025-07-01",ADD,event,"{'name': 'Meeting', 'date': '2025-07-01'}",{},2,SYNTHETIC
+,,None,None,,c2db29d4-9438-44a9-8224-1199997f0e62,show events for July,READ,event,{},{'month': 'July'},1,SYNTHETIC
+DELETE,event,{},{},,9fc280c3-b8fd-4b0a-a089-1479a030005a,delete event Meeting,DELETE,event,{},{'name': 'Meeting'},1,SYNTHETIC
+UPDATE,Meeting,{},None,,241b9079-5fc7-49b9-8a03-975365bcdf15,"update event Meeting, set time=10:00 AM",UPDATE,event,{'time': '10:00 AM'},{'name': 'Meeting'},2,SYNTHETIC
+ADD,customer_rating,"{'feedback': 'rating=5', 'comment': 'comment'}",{},,6a59a464-6fbd-4d23-b51a-d9a0976a7f2d,"add feedback with rating=5, comment=Excellent service",ADD,feedback,"{'rating': '5', 'comment': 'Excellent service'}",{},2,SYNTHETIC
+READ,rating,{'feedback': 'rating'},{},,581d668e-7ad7-4876-a3c5-a3a35747c2b9,get feedback with rating 5,READ,feedback,{},{'rating': '5'},1,SYNTHETIC
+DELETE,excellent_service,{'comment': 'comment'},{},,6bab9f8d-b55d-4db3-8873-928a814d6f8f,delete feedback with comment 'Excellent service',DELETE,feedback,{},{'comment': 'Excellent service'},1,SYNTHETIC
+UPDATE,customer_rating,{'set': 'comment='Very good service'},{'feedback': 'rating'},,4447453b-f62d-4b0f-83b2-3c23a2a667e2,"update feedback with rating 5, set comment='Very good service'",UPDATE,feedback,{'comment': 'Very good service'},{'rating': '5'},2,SYNTHETIC
+ADD,ad,"{'user': 'user', 'username': 'username', None: 'alice'}",{},,85245e4c-f136-44c5-8edd-920488e98556,"add user with username=alice, password=pass123",ADD,user,"{'username': 'alice', 'password': 'pass123'}",{},2,SYNTHETIC
+DELETE,user,{},{},,abe33440-49f6-4be1-b25a-f5a9eccfda0b,delete user alice,DELETE,user,{},{'username': 'alice'},1,SYNTHETIC
+UPDATE,Email,{'email': 'alice'},{'user': 'user'},,5ade056b-651a-4eed-9b69-01fda143c067,"update user alice, set email=alice@example.com",UPDATE,user,{'email': 'alice@example.com'},{'username': 'alice'},2,SYNTHETIC
+ADD,Financial,"{'report': 'title=Monthly Sales, type=financial'}",{},,cae0b354-e345-457b-b4b7-ab83b1fd5cdc,"add report with title=Monthly Sales, type=financial",ADD,report,"{'title': 'Monthly Sales', 'type': 'financial'}",{},2,SYNTHETIC
+READ,financial,{'financial_reports': 'financial reports'},{},,0a48b0fb-a93f-4909-af76-27b1b2d840c3,get financial reports,READ,report,{},{'type': 'financial'},1,SYNTHETIC
+DELETE,Monthly_Sales,{},{},,c7b1b138-6f61-43c3-9845-78d3b8a23eb6,delete report Monthly Sales,DELETE,report,{},{'title': 'Monthly Sales'},1,SYNTHETIC
+UPDATE,monthly_sales,{},None,,760a3edc-4eff-422c-95f3-9ef24df9a4e5,"update report Monthly Sales, set author=Bob",UPDATE,report,{'author': 'Bob'},{'title': 'Monthly Sales'},2,SYNTHETIC
+ADD,PDF,"{'document': 'document', 'name': 'name', 'proposal': 'name', 'format': 'name'}",{},,f339d623-4bbf-422c-b3cd-290c8c261d66,"add document with name=Proposal, format=PDF",ADD,document,"{'name': 'Proposal', 'format': 'PDF'}",{},2,SYNTHETIC
+READ,PDF,"{'pdf': 'document', 'documents': 'document'}",{},,436447f4-1896-4353-b6af-17111fdbd71c,show PDF documents,READ,document,{},{'format': 'PDF'},1,SYNTHETIC
+DELETE,document,{'proposal': 'document'},{},,40b9a144-7574-4802-abb3-cd6cdba709d4,delete document Proposal,DELETE,document,{},{'name': 'Proposal'},1,SYNTHETIC
+UPDATE,document,{'set': 'set'},{'size': 'size'},,fd571a48-4597-45f9-9268-eed1a53bac67,"update document Proposal, set size=5MB",UPDATE,document,{'size': '5MB'},{'name': 'Proposal'},2,SYNTHETIC
+ADD,Inception,"{'movie': 'title', 'nolan': 'inception'}",{},,6f0eb343-cceb-42d9-b22b-5d6b2d24a0b1,"add movie with title=Inception, director=Christopher Nolan",ADD,movie,"{'title': 'Inception', 'director': 'Christopher Nolan'}",{},2,SYNTHETIC
+READ,film,{},{},,9623d9ff-6caa-4720-8bd4-ccfc32e293f7,get movies by Christopher Nolan,READ,movie,{},{'director': 'Christopher Nolan'},1,SYNTHETIC
+DELETE,Inception,{'movie': 'movie'},{},,2eeda01b-a833-4cce-80e1-2c8c0385c7bb,delete movie Inception,DELETE,movie,{},{'title': 'Inception'},1,SYNTHETIC
+UPDATE,film,{},None,,62da7d7d-9755-45f1-a546-2b6ff1a9bc78,"update movie Inception, set release_year=2010",UPDATE,movie,{'release_year': '2010'},{'title': 'Inception'},2,SYNTHETIC
+ADD,Queen,"{'song': 'song', 'title': 'song', 'queen': 'rhapsody'}",{},,83067a7a-9161-47cc-b5a8-b146650e372e,"add song with title=Bohemian Rhapsody, artist=Queen",ADD,song,"{'title': 'Bohemian Rhapsody', 'artist': 'Queen'}",{},2,SYNTHETIC
+,,None,None,,f4b53416-b368-4c81-a5a1-025dd304853b,show songs by Queen,READ,song,{},{'artist': 'Queen'},1,SYNTHETIC
+DELETE,Bohemian_Rhapsody,{'song': 'song'},{},,8964723a-70d4-4407-89f6-c40ab1eaed83,delete song Bohemian Rhapsody,DELETE,song,{},{'title': 'Bohemian Rhapsody'},1,SYNTHETIC
+,,None,None,,9f2d11c4-b234-4fe4-ac6e-efd3a0a829dc,"update song Bohemian Rhapsody, set genre=Rock",UPDATE,song,{'genre': 'Rock'},{'title': 'Bohemian Rhapsody'},2,SYNTHETIC
+ADD,Michael_Jackson,"{'album': 'title', 'jackson': 'thriller'}",{},,37e7f07a-b002-4778-9dca-0aed788aea2d,"add album with title=Thriller, artist=Michael Jackson",ADD,album,"{'title': 'Thriller', 'artist': 'Michael Jackson'}",{},2,SYNTHETIC
+READ,albums,{'albums': 'albums'},{},,2e030560-50ac-4aa1-850a-36f9f85d7d09,get albums by Michael Jackson,READ,album,{},{'artist': 'Michael Jackson'},1,SYNTHETIC
+DELETE,Thriller,{'album': 'Thriller'},{},,e9c52cdf-7b88-44e4-9793-d63babcc0849,delete album Thriller,DELETE,album,{},{'title': 'Thriller'},1,SYNTHETIC
+,,None,None,,6bde0a58-ad84-4da7-9c92-3f1b0f6bcc9f,"update album Thriller, set year=1982",UPDATE,album,{'year': '1982'},{'title': 'Thriller'},2,SYNTHETIC
+ADD,Workout_Mix,"{'playlist': 'playlist', 'name': 'name', 'workout': 'name', 'creator': 'name'}",{},,db600b18-f6ca-4650-a764-04e482eb4e6e,"add playlist with name=Workout Mix, creator=Me",ADD,playlist,"{'name': 'Workout Mix', 'creator': 'Me'}",{},2,SYNTHETIC
+,,None,None,,8cdc2699-7eaa-48d4-b2eb-cd5c8255560a,show playlists created by Me,READ,playlist,{},{'creator': 'Me'},1,SYNTHETIC
+DELETE,Workout_Mix,"{'playlist': 'playlist', 'workout': 'playlist'}",{},,e078107b-22e9-4260-9885-17bd3dc2083c,delete playlist Workout Mix,DELETE,playlist,{},{'name': 'Workout Mix'},1,SYNTHETIC
+UPDATE,Workout_Mix,{},None,,8300e73c-b399-4d59-9b6b-0d44c2329bc3,"update playlist Workout Mix, add song='Eye of the Tiger'",UPDATE,playlist,{'song': 'Eye of the Tiger'},{'name': 'Workout Mix'},2,SYNTHETIC
+ADD,The_Daily,"{'podcast': 'podcast', 'title': 'podcast', None: 'daily'}",{},,43b2a61e-1a32-4544-a49e-f2705ee7e938,"add podcast with title=The Daily, host=Michael Barbaro",ADD,podcast,"{'title': 'The Daily', 'host': 'Michael Barbaro'}",{},2,SYNTHETIC
+READ,podcast,{},{},,5d450dc0-4d19-45d5-a2a2-685f632f69a6,get podcasts by Michael Barbaro,READ,podcast,{},{'host': 'Michael Barbaro'},1,SYNTHETIC
+DELETE,The_Daily_Entity,{'podcast': 'podcast'},{},,fb892705-31a2-43ba-a10b-c95542133989,delete podcast The Daily,DELETE,podcast,{},{'title': 'The Daily'},1,SYNTHETIC
+,,None,None,,928bc00a-bafd-4b0f-a170-8642d147f16a,"update podcast The Daily, set genre=News",UPDATE,podcast,{'genre': 'News'},{'title': 'The Daily'},2,SYNTHETIC
+ADD,Italian,"{'recipe': 'recipe', 'name': 'name', 'spaghetti': 'name', 'italian': 'carbonara'}",{},,423d6f2d-780c-4f23-a867-9c86f4ef2c53,"add recipe with name=Spaghetti Carbonara, cuisine=Italian",ADD,recipe,"{'name': 'Spaghetti Carbonara', 'cuisine': 'Italian'}",{},2,SYNTHETIC
+READ,Italian,{'italian_recipes': 'Italian'},{},,35ab9ac2-9806-4b33-8c92-25135003cb53,show Italian recipes,READ,recipe,{},{'cuisine': 'Italian'},1,SYNTHETIC
+DELETE,Spaghetti,"{'recipe': 'recipe', 'spaghetti': 'recipe', 'carbonara': 'recipe'}",{},,93c3ab7d-cc61-488d-88b3-c1f8f42472c3,delete recipe Spaghetti Carbonara,DELETE,recipe,{},{'name': 'Spaghetti Carbonara'},1,SYNTHETIC
+UPDATE,Spaghetti_Carbonara,{'minutes': 'carbonara'},{},,47ce7d97-5235-49bb-bf80-a2886e7ec0a5,"update recipe Spaghetti Carbonara, set prep_time=30 minutes",UPDATE,recipe,{'prep_time': '30 minutes'},{'name': 'Spaghetti Carbonara'},2,SYNTHETIC
+ADD,tomato,"{'name': 'name', 'quantity': 'quantity'}",{},,59e4dd4e-f61c-414a-a732-57581d545855,"add ingredient with name=Tomato, quantity=2",ADD,ingredient,"{'name': 'Tomato', 'quantity': '2'}",{},2,SYNTHETIC
+READ,ingredients,{'pizza': 'ingredients'},{},,c95424ab-38cd-451c-a9d6-bfe07bf7d16f,get ingredients needed for pizza,READ,ingredient,{},{'for_recipe': 'pizza'},1,SYNTHETIC
+DELETE,tomato,{},{},,8532e15b-78ac-45f7-bbac-5c2d23add530,delete ingredient Tomato,DELETE,ingredient,{},{'name': 'Tomato'},1,SYNTHETIC
+UPDATE,tomato,{},None,,8ccfb41e-cc33-4824-9126-0bffdf9138ac,"update ingredient Tomato, set unit=kg",UPDATE,ingredient,{'unit': 'kg'},{'name': 'Tomato'},2,SYNTHETIC
+ADD,restaurant,"{'name': 'name', 'bistro': 'name', 'type': 'type'}",{},,b222e237-1701-4633-ae72-68f973cc0896,"add restaurant with name=The Bistro, type=French",ADD,restaurant,"{'name': 'The Bistro', 'type': 'French'}",{},2,SYNTHETIC
+READ,French,{'french_restaurants': 'French restaurants'},{},,7539183e-a87b-4689-bfa0-391f6c99706c,show French restaurants,READ,restaurant,{},{'type': 'French'},1,SYNTHETIC
+DELETE,restaurant,{},{},,cb1a45d5-fd17-44ad-937e-0ca210f2095a,delete restaurant The Bistro,DELETE,restaurant,{},{'name': 'The Bistro'},1,SYNTHETIC
+UPDATE,restaurant,{'restaurant': 'bistro'},{},,62d13e63-5b9a-4c30-8d67-cf4ec5318892,"update restaurant The Bistro, set rating=4.5",UPDATE,restaurant,{'rating': '4.5'},{'name': 'The Bistro'},2,SYNTHETIC
+ADD,Civic,"{'car': 'car', 'make': 'make', 'civic': 'honda'}",{},,68419e23-b504-49bb-b6dd-8fca320a4fd9,"add car with make=Honda, model=Civic",ADD,car,"{'make': 'Honda', 'model': 'Civic'}",{},2,SYNTHETIC
+READ,Honda,{'honda': 'honda'},{},,24bcd75e-99b6-4603-94cc-7a31546adf4c,get Honda cars,READ,car,{},{'make': 'Honda'},1,SYNTHETIC
+DELETE,car,{},{},,0453617e-15e9-4755-bc9f-ee916a674add,delete car Honda Civic,DELETE,car,{},"{'make': 'Honda', 'model': 'Civic'}",2,SYNTHETIC
+UPDATE,Honda_Civic,{'2020': 'civic'},{'car': 'car'},,fbc55344-7ee2-45d3-98b3-9f06b1927f3d,"update car Honda Civic, set year=2020",UPDATE,car,{'year': '2020'},"{'make': 'Honda', 'model': 'Civic'}",3,SYNTHETIC
+ADD,123_Main_St,"{'address': '123 Main St, bedrooms=3'}",{},,7cdf2f3c-9b08-4e04-8633-eb033526d558,"add house with address=123 Main St, bedrooms=3",ADD,house,"{'address': '123 Main St', 'bedrooms': '3'}",{},2,SYNTHETIC
+,,None,None,,fffb0e8b-f3ac-42ac-a1f0-edf4cf05b39d,show houses with 4 bedrooms,READ,house,{},{'bedrooms': '4'},1,SYNTHETIC
+DELETE,house,{},{},,1e7d6a4a-e989-4c36-a5e8-19e2032b93a4,delete house at 123 Main St,DELETE,house,{},{'address': '123 Main St'},1,SYNTHETIC
+UPDATE,house,{'house': 'st'},{},,12b07467-e2f3-435c-8c96-52c89cd98ec4,"update house at 123 Main St, set price=300000",UPDATE,house,{'price': '300000'},{'address': '123 Main St'},2,SYNTHETIC
+ADD,dog,{'pet': 'dog'},{},,d2f234a6-dcbc-47f9-9ff7-7fc3168bee3a,"add pet with name=Buddy, species=dog",ADD,pet,"{'name': 'Buddy', 'species': 'dog'}",{},2,SYNTHETIC
+READ,dog,{},{},,760640cd-a9e2-477f-8b39-24c0d5d2ebe2,get all dogs,READ,pet,{},{'species': 'dog'},1,SYNTHETIC
+DELETE,pet,{},{},,93182956-7a9b-4c24-829c-ac703c739ebc,delete pet Buddy,DELETE,pet,{},{'name': 'Buddy'},1,SYNTHETIC
+UPDATE,pet,{},None,,ac0b15bb-3b94-4356-9ac9-ea8efcf0e72d,"update pet Buddy, set age=5",UPDATE,pet,{'age': '5'},{'name': 'Buddy'},2,SYNTHETIC
+ADD,Rose,{'plant': 'type=flower'},{},,54b4c069-4016-4e60-bebc-5895ea6a79f7,"add plant with name=Rose, type=flower",ADD,plant,"{'name': 'Rose', 'type': 'flower'}",{},2,SYNTHETIC
+READ,flowers,{'flowers': 'flowers'},{},,c8e6aeae-2410-4cff-ac99-ab2dc944c91b,show all flowers,READ,plant,{},{'type': 'flower'},1,SYNTHETIC
+DELETE,plant,{},{},,7b040bc4-e83f-46d9-8bed-d827e7aecd73,delete plant Rose,DELETE,plant,{},{'name': 'Rose'},1,SYNTHETIC
+UPDATE,color_red,{'color': 'color'},{'rose': 'nt Rose'},,d38863ea-17b5-4f2a-a22c-27cf1945ed91,"update plant Rose, set color=red",UPDATE,plant,{'color': 'red'},{'name': 'Rose'},2,SYNTHETIC
+ADD,Dell,{'computer': 'model=XPS'},{},,e5b9e9ee-2336-4d8c-9ca2-fa906f2ea8fa,"add computer with brand=Dell, model=XPS",ADD,computer,"{'brand': 'Dell', 'model': 'XPS'}",{},2,SYNTHETIC
+READ,Dell,{},{},,f0bb616d-c0c9-4ed9-9c4e-1f02d0cfd2a6,get Dell computers,READ,computer,{},{'brand': 'Dell'},1,SYNTHETIC
+DELETE,Dell_XPS,{},{},,17c90a10-af6f-47fc-8589-fcb64d362964,delete computer Dell XPS,DELETE,computer,{},"{'brand': 'Dell', 'model': 'XPS'}",2,SYNTHETIC
+UPDATE,XPS,{None: 'xps'},{'computer': 'computer'},,1575f4f1-01b5-4293-bf3d-f0d56c31341a,"update computer Dell XPS, set RAM=16GB",UPDATE,computer,{'RAM': '16GB'},"{'brand': 'Dell', 'model': 'XPS'}",3,SYNTHETIC
+ADD,iPhone_15,{'phone': 'model'},{},,fb4a88c5-134b-445d-9bf7-0115e9d92072,"add phone with brand=Apple, model=iPhone 15",ADD,phone,"{'brand': 'Apple', 'model': 'iPhone 15'}",{},2,SYNTHETIC
+DELETE,iPhone,{'phone': 'phone'},{},,d878ebd9-f170-413d-a79b-9b48266059ef,delete phone iPhone 15,DELETE,phone,{},{'model': 'iPhone 15'},1,SYNTHETIC
+UPDATE,iPhone,{None: 'iphone'},{},,c88cabfb-9cb9-44ee-81f2-a3ca9834e209,"update phone iPhone 15, set storage=256GB",UPDATE,phone,{'storage': '256GB'},{'model': 'iPhone 15'},2,SYNTHETIC
+ADD,Samsung,"{'appliance': 'appliance', 'type': 'type', 'refrigerator': 'type', 'brand': 'brand'}",{},,0a7d1cb3-b250-42d3-bc6a-c7bb50c35c55,"add appliance with type=Refrigerator, brand=Samsung",ADD,appliance,"{'type': 'Refrigerator', 'brand': 'Samsung'}",{},2,SYNTHETIC
+READ,Samsung,{},{},,90a03475-9d6c-4784-b31f-fafe1407d32d,get Samsung appliances,READ,appliance,{},{'brand': 'Samsung'},1,SYNTHETIC
+DELETE,appliance,{},{},,13fd8b1d-6224-4687-b1bd-fe1408c6e07f,delete appliance Refrigerator,DELETE,appliance,{},{'type': 'Refrigerator'},1,SYNTHETIC
+UPDATE,appliance,{'refrigerator': 'set'},"{'color': 'color', 'silver': 'color'}",,81f35433-cb07-4b62-b1b5-e6135566cfee,"update appliance Refrigerator, set color=silver",UPDATE,appliance,{'color': 'silver'},{'type': 'Refrigerator'},2,SYNTHETIC
+ADD,T_shirt,"{'clothing': 'clothing', 'item': 'item', 'size': 'size'}",{},,de2b48d7-6d2b-4584-9687-e2dd95cf2491,"add clothing with item=T-shirt, size=M",ADD,clothing,"{'item': 'T-shirt', 'size': 'M'}",{},2,SYNTHETIC
+READ,size_M,"{'size': 'size', 'clothing': 'm'}",{},,db287951-0b75-4ec0-a0de-b5da2f98b8c5,show all size M clothing,READ,clothing,{},{'size': 'M'},1,SYNTHETIC
+DELETE,T_shirt,{'clothing': 'clothing'},{},,bdb43bef-7f6f-497d-86f6-4d2936544030,delete clothing T-shirt,DELETE,clothing,{},{'item': 'T-shirt'},1,SYNTHETIC
+,,None,None,,e86143a8-ae42-41d8-adf4-f73c918db940,"update clothing T-shirt, set color=blue",UPDATE,clothing,{'color': 'blue'},{'item': 'T-shirt'},2,SYNTHETIC
+ADD,Sneakers,"{'type': 'type', 'sneakers': 'type', 'brand': 'brand'}",{},,23810676-58af-468a-8c6f-e2d1e7348ba8,"add footwear with type=Sneakers, brand=Nike",ADD,footwear,"{'type': 'Sneakers', 'brand': 'Nike'}",{},2,SYNTHETIC
+READ,neoprene,{None: 'nike'},{},,2fa7b7a1-e750-470a-8a96-1e5fdb988dc4,get Nike footwear,READ,footwear,{},{'brand': 'Nike'},1,SYNTHETIC
+DELETE,Sneakers,{'footwear': 'Sneakers'},{},,c5ab9c4d-7360-4142-ba96-8bc5d332ffa7,delete footwear Sneakers,DELETE,footwear,{},{'type': 'Sneakers'},1,SYNTHETIC
+,,None,None,,d35bba96-12ea-4187-8bc7-93e42d17d018,"update footwear Sneakers, set size=9",UPDATE,footwear,{'size': '9'},{'type': 'Sneakers'},2,SYNTHETIC
+ADD,leather,{'furniture': 'material=leather'},{},,5108543b-87a5-4f99-8595-6902f464816a,"add furniture with item=Sofa, material=leather",ADD,furniture,"{'item': 'Sofa', 'material': 'leather'}",{},2,SYNTHETIC
+READ,furniture,{'leather': 'leather'},{},,56655ab3-9493-45ad-9e3b-4cf5b0dd773b,show leather furniture,READ,furniture,{},{'material': 'leather'},1,SYNTHETIC
+DELETE,furniture,{},{},,4cf71fb5-e932-498a-835f-0abff69309d9,delete furniture Sofa,DELETE,furniture,{},{'item': 'Sofa'},1,SYNTHETIC
+,,None,None,,17207472-1a66-4c09-b9a4-0892e6647fa7,"update furniture Sofa, set color=brown",UPDATE,furniture,{'color': 'brown'},{'item': 'Sofa'},2,SYNTHETIC
+ADD,office,"{'type': 'type', 'address': 'type'}",{},,a8849ed8-fde1-4efa-a665-492e389de6b1,"add building with type=Office, address=456 Oak Ave",ADD,building,"{'type': 'Office', 'address': '456 Oak Ave'}",{},2,SYNTHETIC
+READ,office_buildings,"{'office': 'office', 'buildings': 'office'}",{},,913ef602-d60a-4288-b18d-cf9399b03ff1,get all office buildings,READ,building,{},{'type': 'Office'},1,SYNTHETIC
+DELETE,456_Oak_Ave_,{'building': 'building'},{},,a55add73-a790-4ff7-b929-4a24bf053bca,delete building 456 Oak Ave,DELETE,building,{},{'address': '456 Oak Ave'},1,SYNTHETIC
+UPDATE,floor,{},None,,c31c0990-da72-476e-9c87-86e0d8be6769,"update building 456 Oak Ave, set floors=10",UPDATE,building,{'floors': '10'},{'address': '456 Oak Ave'},2,SYNTHETIC
+ADD,Google,"{'device': 'device', 'type': 'type', 'brand': 'brand'}",{},,4fd849ab-a50b-4c9c-84d5-098e3e2fee1f,"add device with type=Smart Speaker, brand=Google",ADD,device,"{'type': 'Smart Speaker', 'brand': 'Google'}",{},2,SYNTHETIC
+READ,Google,{'devices': 'google'},{},,575dcac6-0430-4b52-9c24-3519c84deedc,show Google devices,READ,device,{},{'brand': 'Google'},1,SYNTHETIC
+DELETE,Smart_Speaker,{'device': 'device'},{},,7bf1af18-79a2-4470-96a4-911670edaaa2,delete device Smart Speaker,DELETE,device,{},{'type': 'Smart Speaker'},1,SYNTHETIC
+UPDATE,Smart_Speaker,{'status': 'status'},{'device': 'device'},,0a11e556-1641-409e-9e1b-ffd21ca8fead,"update device Smart Speaker, set status=offline",UPDATE,device,{'status': 'offline'},{'type': 'Smart Speaker'},2,SYNTHETIC
+ADD,Photoshop,{'software': 'version=CC'},{},,9efa7ccf-b842-4af5-b75d-64e86a09cf44,"add software with name=Photoshop, version=CC",ADD,software,"{'name': 'Photoshop', 'version': 'CC'}",{},2,SYNTHETIC
+READ,CC,{'software': 'version CC'},{},,16920f7a-b3a0-4cd9-afa8-9529913af200,get software with version CC,READ,software,{},{'version': 'CC'},1,SYNTHETIC
+DELETE,Photoshop,{'software': 'software'},{},,ad0edc65-5cae-4354-8ae6-93943e76555b,delete software Photoshop,DELETE,software,{},{'name': 'Photoshop'},1,SYNTHETIC
+UPDATE,license,{'license': 'photoshop'},{'software': 'software'},,c0c1c528-a54c-48ef-823d-1e17e2b1afa9,"update software Photoshop, set license=perpetual",UPDATE,software,{'license': 'perpetual'},{'name': 'Photoshop'},2,SYNTHETIC
+ADD,RPG,"{'game': 'game', 'title': 'title', 'rpg': 'cyberpunk'}",{},,2076e364-01ea-4623-bf05-c39598477bc6,"add game with title=Cyberpunk 2077, genre=RPG",ADD,game,"{'title': 'Cyberpunk 2077', 'genre': 'RPG'}",{},2,SYNTHETIC
+,,None,None,,9123aad8-702a-4092-b75e-13bb4af44b23,show RPG games,READ,game,{},{'genre': 'RPG'},1,SYNTHETIC
+DELETE,Cyberpunk_2077,{'game': 'game'},{},,26919108-775d-409b-ac80-296202e22740,delete game Cyberpunk 2077,DELETE,game,{},{'title': 'Cyberpunk 2077'},1,SYNTHETIC
+UPDATE,Cyberpunk_2077,"{'game': 'game', 'pc': 'cyberpunk'}",{},,e756edcf-7edb-4298-a786-c15f51d61ee6,"update game Cyberpunk 2077, set platform=PC",UPDATE,game,{'platform': 'PC'},{'title': 'Cyberpunk 2077'},2,SYNTHETIC
+ADD,PlayStation_5,"{'console': 'console', 'brand': 'brand', '5': 'sony'}",{},,f93f4049-c0bd-4e35-aa51-8479ba1e47fc,"add console with brand=Sony, model=PlayStation 5",ADD,console,"{'brand': 'Sony', 'model': 'PlayStation 5'}",{},2,SYNTHETIC
+READ,consoles,{},{},,2bf129cd-86bc-4810-b7e1-3cc8d977bc0b,get Sony consoles,READ,console,{},{'brand': 'Sony'},1,SYNTHETIC
+DELETE,PlayStation_5,{'console': 'console'},{},,f82947bb-7529-407e-a240-447afba1d124,delete console PlayStation 5,DELETE,console,{},{'model': 'PlayStation 5'},1,SYNTHETIC
+UPDATE,PlayStation_5,{None: 'playstation'},{'console': 'console'},,83ae76de-c0dd-4818-9b08-b1192df07740,"update console PlayStation 5, set storage=1TB",UPDATE,console,{'storage': '1TB'},{'model': 'PlayStation 5'},2,SYNTHETIC
+ADD,_Starry_Night_,"{'artwork': 'artwork', 'title': 'artwork', 'artist': 'artist'}",{},,ec2ebbbd-9d08-4683-a0d5-a34ae1b4747a,"add artwork with title=Starry Night, artist=Vincent van Gogh",ADD,artwork,"{'title': 'Starry Night', 'artist': 'Vincent van Gogh'}",{},2,SYNTHETIC
+READ,kunstwerk,{'artworks': 'artworks'},{},,90b2da90-fbab-45d2-8efd-7bfcdb532cf0,show artworks by Vincent van Gogh,READ,artwork,{},{'artist': 'Vincent van Gogh'},1,SYNTHETIC
+DELETE,Starry_Night,{'artwork': 'artwork'},{},,4dd14b03-5176-447d-a7cf-4023c35ef42e,delete artwork Starry Night,DELETE,artwork,{},{'title': 'Starry Night'},1,SYNTHETIC
+,,None,None,,20b8ed39-ebdb-40f9-97c5-76eb4528955d,"update artwork Starry Night, set year=1889",UPDATE,artwork,{'year': '1889'},{'title': 'Starry Night'},2,SYNTHETIC
+ADD,Paris,"{'museum': 'name=The Louvre, city=Paris'}",{},,748a9c2b-bb0d-426c-9966-80e2971b2657,"add museum with name=The Louvre, city=Paris",ADD,museum,"{'name': 'The Louvre', 'city': 'Paris'}",{},2,SYNTHETIC
+READ,Mus_es,{'museums': 'in Paris'},{},,c1aa5b30-d64c-4a50-a5ab-6d2dfa03c061,get museums in Paris,READ,museum,{},{'city': 'Paris'},1,SYNTHETIC
+DELETE,museum,{},{},,bf103be3-39bc-4629-84e6-769acf878c0b,delete museum The Louvre,DELETE,museum,{},{'name': 'The Louvre'},1,SYNTHETIC
+UPDATE,Egypt,{'egypt': 'louvre'},{},,77fc641b-113d-44d9-bddc-6eb654b67d15,"update museum The Louvre, set exhibits=Ancient Egypt",UPDATE,museum,{'exhibits': 'Ancient Egypt'},{'name': 'The Louvre'},2,SYNTHETIC
+ADD,Eiffel_Tower,"{'monument': 'monument', 'name': 'name', 'paris': 'tower'}",{},,08186978-a5eb-4d72-a6c5-40dc5b4002d0,"add monument with name=Eiffel Tower, location=Paris",ADD,monument,"{'name': 'Eiffel Tower', 'location': 'Paris'}",{},2,SYNTHETIC
+READ,monuments,{},{},,8b46f3fb-6319-4220-9972-3430422171f0,show monuments in Paris,READ,monument,{},{'location': 'Paris'},1,SYNTHETIC
+DELETE,monument,{},{},,d30aecf4-de43-4313-ac58-91675d76c13c,delete monument Eiffel Tower,DELETE,monument,{},{'name': 'Eiffel Tower'},1,SYNTHETIC
+UPDATE,Eiffel_Tower,{None: 'tower'},{},,1da79a20-e1d4-48c1-9027-e5bede18602c,"update monument Eiffel Tower, set height=330m",UPDATE,monument,{'height': '330m'},{'name': 'Eiffel Tower'},2,SYNTHETIC
+ADD,Statue_of_Liberty,"{'landmark': 'landmark', 'name': 'name', 'york': 'liberty'}",{},,997f21f6-7cd7-47f6-b7ae-65781bf7eb43,"add landmark with name=Statue of Liberty, city=New York",ADD,landmark,"{'name': 'Statue of Liberty', 'city': 'New York'}",{},2,SYNTHETIC

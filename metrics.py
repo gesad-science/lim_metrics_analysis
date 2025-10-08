@@ -83,7 +83,17 @@ def _create_dataframe(data, is_global=False):
         if not is_global: 
             row["column"] = key[1]
         rows.append(row)
-    return pd.DataFrame(rows)
+    df = pd.DataFrame(rows)
+
+    if not is_global:
+        column_order = ['configuration', 'column', 'TP', 'FP', 'FN', 'TN', 
+                        'precision', 'recall', 'f1', 'accuracy']
+    else:
+        column_order = ['configuration', 'TP', 'FP', 'FN', 'TN', 
+                        'precision', 'recall', 'f1', 'accuracy']
+
+    existing_columns = [col for col in column_order if col in df.columns]
+    return df.reindex(columns=existing_columns)
 
 def metrics_by_config(all_metrics):
     detailed_config, global_config = _aggregate_metrics(all_metrics)

@@ -10,7 +10,7 @@ names = [
     'flan_default', 'flan_treatment_mode', 'gemma3_default', 
     'gemma3_treatment_mode', 'llama3_default', 'llama3_treatment_mode', 
     'mistral_default', 'mistral_treatment_mode', 'qwen3_default', 
-    'qwen3_treatment_mode'
+    'qwen3_treatment_mode', 'phi3_default', 'phi3_treatment_mode'
     ]
 
 def parse_cell(val):

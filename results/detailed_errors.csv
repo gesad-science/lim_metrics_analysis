@@ -1,0 +1,5 @@
+column,error_reduction_rate_pct,error_default,error_treatment
+processed_intent,45.84837545126354,277.0,150.0
+processed_class,57.45513115508514,4346.0,1849.0
+processed_attributes,18.991036064206796,4797.0,3886.0
+processed_filter_attributes,1.7476303317535544,3376.0,3317.0

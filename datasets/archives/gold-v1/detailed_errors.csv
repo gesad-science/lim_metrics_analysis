@@ -1,0 +1,5 @@
+column,fp_default,fn_default,fp_treatment,fn_treatment,total_errors_default,total_errors_treatment,error_reduction_rate_pct
+processed_intent,7.0,209.0,40.0,57.0,216.0,97.0,55.092592592592595
+processed_class,4919.0,217.0,1387.0,229.0,5136.0,1616.0,68.53582554517133
+processed_attributes,1494.0,2062.0,2634.0,975.0,3556.0,3609.0,-1.4904386951631048
+processed_filter_attributes,139.0,2414.0,169.0,2605.0,2553.0,2774.0,-8.656482569526048

@@ -21,10 +21,10 @@ def compare_values(proc, exp):
     return "FN" if not exp_empty and proc_empty else "FP"
 
 def calculate_metrics(counter):
-    TP, FP, FN = counter.get("TP", 0), counter.get("FP", 0), counter.get("FN", 0)
+    TP, FP, FN, TN = counter.get("TP", 0), counter.get("FP", 0), counter.get("FN", 0), counter.get("TN", 0)
     precision = TP / (TP + FP) if (TP + FP) > 0 else 0.0
     recall = TP / (TP + FN) if (TP + FN) > 0 else 0.0
-    accuracy = TP / (TP + FP + FN) if (TP + FP + FN) > 0 else 0.0
+    accuracy = TP / (TP + FP + FN + TN) if (TP + FP + FN + TN) > 0 else 0.0
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
     return {"precision": precision, "recall": recall, "f1": f1, "accuracy": accuracy}
 
@@ -58,9 +58,13 @@ def _aggregate_metrics(all_metrics):
         
         for col, counter in counts.items():
             key = (config, col)
-            detailed_config.setdefault(key, Counter()).update(counter)
+            if key not in detailed_config:
+                detailed_config[key] = Counter({'TP': 0, 'FP': 0, 'FN': 0, 'TN': 0})
+            detailed_config[key].update(counter)
         
-        global_config.setdefault(config, Counter()).update(global_counter)
+        if config not in global_config:
+            global_config[config] = Counter({'TP': 0, 'FP': 0, 'FN': 0, 'TN': 0})
+        global_config[config].update(global_counter)
     
     return detailed_config, global_config
 
@@ -68,10 +72,13 @@ def _create_dataframe(data, is_global=False):
     rows = []
     for key, counter in data.items():
         metrics = calculate_metrics(counter)
+        counts_dict = {}
+        for count_type in ['TP', 'FP', 'FN', 'TN']:
+            counts_dict[count_type] = counter.get(count_type, 0)
         row = {
             "configuration": key[0] if not is_global else key,
             **metrics,
-            **{k: counter[k] for k in ['TP', 'FP', 'FN', 'TN'] if k in counter}
+            **counts_dict
         }
         if not is_global: 
             row["column"] = key[1]
@@ -97,14 +104,20 @@ def metrics_by_model(all_metrics):
         config = 'treatment_mode' if 'treatment_mode' in name else 'default'
         
         for col, counter in counts.items():
+            complete_counter = Counter({'TP': 0, 'FP': 0, 'FN': 0, 'TN': 0})
+            complete_counter.update(counter)
+
             detailed_rows.append({
                 'model': name, 'configuration': config, 'column': col,
-                **calculate_metrics(counter), **dict(counter)
+                **calculate_metrics(counter), **dict(complete_counter)
             })
         
+        complete_global_counter = Counter({'TP': 0, 'FP': 0, 'FN': 0, 'TN': 0})
+        complete_global_counter.update(global_counter)
+
         global_rows.append({
             'model': name, 'configuration': config,
-            **calculate_metrics(global_counter), **dict(global_counter)
+            **calculate_metrics(global_counter), **dict(complete_global_counter)
         })
     
     pd.DataFrame(detailed_rows).to_csv('results/all_detailed_metrics_by_model.csv', index=False)
@@ -199,8 +212,6 @@ def error_reduction(df):
     available_cols = [col for col in output_cols if col in error_data.columns]
     result = error_data[available_cols]
     
-    print("Error Reduction Rate Results:")
-    print(result)
     return result.drop('configuration', axis=1, errors='ignore')
 
 def improvement_analysis(df_details, df_global):
@@ -228,7 +239,6 @@ def main():
         try:
             df_silver = pd.read_csv(f'datasets/silver/{name}_cleaned.csv', dtype=str)
             all_metrics[name] = evaluate(df_silver)
-            print(f"Processed {name} successfully")
         except Exception as e:
             print(f"Error processing {name}: {e}")
             traceback.print_exc()
@@ -237,7 +247,6 @@ def main():
         detaileds, globals_df = metrics_by_config(all_metrics)
         improvement_analysis(detaileds, globals_df)
         error_analysis(detaileds, globals_df)
-        print("Analysis completed successfully!")
     else:
         print("No models processed successfully")
 

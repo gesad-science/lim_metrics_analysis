@@ -1,0 +1,9 @@
+configuration,metric,performance_parity
+default,accuracy,0.4371141975308642
+default,precision,0.5442197769826463
+default,recall,0.6149819905286377
+default,f1,0.5896022043665847
+treatment_mode,accuracy,0.8884962701217117
+treatment_mode,precision,0.9155829590691027
+treatment_mode,recall,0.9397228327808752
+treatment_mode,f1,0.9303095382144939
